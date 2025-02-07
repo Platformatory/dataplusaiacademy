@@ -8,5 +8,8 @@ url: "" # the base hostname & protocol for your site
 twitter_username:
 github_username:
 
+phone_number: +919353003282
+email: enroll@dataplusai.academy
+
 # Build settings
 markdown: kramdown
