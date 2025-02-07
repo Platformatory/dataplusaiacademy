@@ -47,7 +47,7 @@ p {
 }
 
 .section-container{
-    scroll-margin-top: 64px;
+    scroll-margin-top: 86px;
     min-height: 98%;
     display: flex;
     flex-direction: column;
@@ -168,9 +168,9 @@ aside {
 
 // Homepage Header
 #mainNav{
-    height: 60px;
+    height: 86px;
     .navbar-collapse{
-        padding-top: 5px;
+        padding-top: 15px;
     }
 }
 header {
