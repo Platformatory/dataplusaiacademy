@@ -1,4 +1,5 @@
 ---
+layout: course
 title: "Real-Time Data Bootcamp"
 subtitle: "Unlock the power of Data Streaming and AI"
 
@@ -26,12 +27,14 @@ why_data_ai_academy:
   - "Weekly 1:1 mentoring sessions for project and career guidance"
 
 duration_delivery:
-  duration: "3 Months"
-  mode: "Live Online or In-person"
-  schedule: "Classes on Mon, Wed, and Thu (9:30am to 1pm)"
-  masterclass: "Weekly Masterclass by industry experts"
-
+  - "Duration: 3 Months"
+  - "Live Online or In-person"
+  - "Classes on Mon, Wed, and Thu (9:30am to 1pm)"
+  - "Weekly Masterclass by industry experts"
+  
+image: "/img/real-time-data.jpg"
 upcoming_batches:
   start_date: "March 2025"
+weight: 1
 
 ---

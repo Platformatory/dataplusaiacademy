@@ -1,5 +1,5 @@
 ---
-
+layout: course
 title: "Advanced Data Streaming and GenAI Integration Program"
 subtitle: "Build real-time data streaming and AI-driven applications"
 
@@ -32,11 +32,13 @@ why_data_ai_academy:
   - "Weekly 1:1 mentoring sessions for project and career guidance"
 
 duration_delivery:
-  duration: "6 months, Part-time"
-  mode: "Live Online on Saturdays (9:30am to 1pm) and open-office hours and masterclasses during the week"
-  mentoring: "Weekly 1:1 mentoring for career development"
-
+  - "Duration: 6 months, Part-time"
+  - "Live Online on Saturdays (9:30am to 1pm) and open-office hours and masterclasses during the week"
+  - "Weekly 1:1 mentoring for career development"
+  
+image: "/img/advanced-data-streaming.jpg"
 upcoming_batches:
-  start_date: "March 2025"
+  start_date: "March 2025"  
+weight: 2
 
 ---

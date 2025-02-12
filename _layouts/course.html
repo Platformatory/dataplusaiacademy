@@ -1,60 +1,71 @@
 ---
 layout: default
+title: Data+AI Academy Course Detail
 ---
   
-  <div class="course-detail-container">
-    <div class="container course-detail">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-white">{{ page.title }}</h1>
-          <h3 class="text-white">{{ page.subtitle }}</h3>
+  <div class="container">
+      <!-- Hero Section -->
+      <div class="hero">
+          <img
+              src="{{ page.image }}"
+              alt="{{ page.title }}"
+              class="hero-image"
+          />
+          <h1 class="hero-title">{{ page.title }}</h1>
+          <p class="hero-subtitle">{{ page.subtitle }}</p>
+      </div>
+      
+      <div class="interested-container">
+        <a href="{{ site.g_form }}" target="_blank" class="btn-get-interested">I'm Interested</a>
+    </div>
+
     
-          <div class="row overview">
-            <div class="col-md-4">
-              <div class="panel panel-info">
-                <div class="panel-heading">Key Details</div>
-                <div class="panel-body">
-                  <p><strong>Duration:</strong> {{ page.duration }}</p>
-                  <p><strong>Delivery:</strong> {{ page.delivery }}</p>
-                  <p><strong>Next Batch:</strong> {{ page.batch_date }}</p>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-md-8">
-              <div class="panel panel-default">
-                <div class="panel-heading">Program Highlights</div>
-                <ul class="list-group">
-                  {% for item in page.highlights %}
-                  <li class="list-group-item">{{ item }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default curriculum-section">
-            <div class="panel-heading">Curriculum</div>
-            <div class="panel-body">
-              <div class="row">
-                {% for item in page.curriculum %}
-                <div class="col-md-4">
-                  <div class="media">
-                    <div class="media-left">
-                      <span class="glyphicon glyphicon-certificate"></span>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">{{ item }}</h4>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-          <!-- Add more sections similarly -->
+      <!-- Course Details Section -->
+      <div class="course-details">
+          <!-- <h2>Description</h2>
+          <p>{{ page.description }}</p> -->
+  
+          <h2>Bootcamp Highlights</h2>
+          <ul class="course-list">
+              {% for highlight in page.highlights %}
+              <li>{{ highlight }}</li>
+              {% endfor %}
+          </ul>
+  
+          <h2>Who Can Attend?</h2>
+          <ul class="course-list">
+              {% for item in page.who_can_attend %}
+              <li>{{ item }}</li>
+              {% endfor %}
+          </ul>
+  
+          <h2>Why Attend?</h2>
+          <ul class="course-list">
+              {% for reason in page.why_attend %}
+              <li>{{ reason }}</li>
+              {% endfor %}
+          </ul>
+
+          <h2>Why Data+AI Academy?</h2>
+          <ul class="course-list">
+              {% for reason in page.why_data_ai_academy %}
+              <li>{{ reason }}</li>
+              {% endfor %}
+          </ul>
+
+          <h2>Duration Delivery</h2>
+          <ul class="course-list">
+              {% for reason in page.duration_delivery %}
+              <li>{{ reason }}</li>
+              {% endfor %}
+          </ul>
+
+          <div class="upcoming-batches">
+            <h2>Upcoming Batches</h2>
+            <p>{{ page.upcoming_batches.start_date }}</p>
         </div>
       </div>
-    </div>
+      <!-- Upcoming Batches Section -->
+    
   </div>
-
- 
+  

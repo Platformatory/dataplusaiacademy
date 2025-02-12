@@ -6,33 +6,22 @@ title: Data+AI Academy Courses
   <div class="course-listing">
     <div class="container courses-container">
       <h1 class="title">Data+AI Academy Courses</h1>
-    
-      <div class="row">
-        {% for course in site.courses %}
-        <div class="col-md-6">
-          <div class=" panel-default course-card">
-            <div class="panel-heading">
-              <h3>{{ course.title }}</h3>
-              <h4>{{ course.subtitle }}</h4>
-            </div>
-            <div class="panel-body bg-info">
-              <div class="course-meta">
-                <span class="label label-info">{{ course.duration }}</span>
-                <span class="label label-success">{{ course.delivery }}</span>
+      <div class="card-grid">
+        {% assign sorted_courses = site.courses | sort: "weight" %}
+          {% for course in sorted_courses %}
+          <div class="card">
+              <img
+                  src="{{ course.image }}"
+                  alt="{{ course.title }}"
+                  class="card-image"
+              />
+              <div class="card-content">
+                  <h2 class="card-title">{{ course.title }}</h2>
+                  <p class="card-subtitle">{{ course.subtitle }}</p>
+                  <a href="{{ course.url }}" class="card-link">Learn more →</a>
               </div>
-              <ul class="course-highlights">
-                {% for highlight in course.highlights limit:3 %}
-                <li>{{ highlight }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="panel-footer">
-              <a href="{{ course.url }}" class="btn btn-primary">Learn More</a>
-              <!-- <span class="batch-date">Next batch: {{ course.batch_date }}</span> -->
-            </div>
           </div>
-        </div>
-        {% endfor %}
+          {% endfor %}
       </div>
     </div>
   </div>
