@@ -129,23 +129,23 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: rgba(white, .3);
-        .navbar-header .navbar-brand {
-            color: rgba(white, .7);
-            &:hover,
-            &:focus {
-                color: white;
-            }
-        }
-        .nav > li > a,
-        .nav > li > a:focus {
-            color: rgba(white, .7);
-            &:hover {
-                color: white;
-            }
-        }
+        // border-color: rgba(white, .3);
+        // .navbar-header .navbar-brand {
+        //     color: rgba(white, .7);
+        //     &:hover,
+        //     &:focus {
+        //         color: white;
+        //     }
+        // }
+        // .nav > li > a,
+        // .nav > li > a:focus {
+        //     color: rgba(white, .7);
+        //     &:hover {
+        //         color: white;
+        //     }
+        // }
         &.affix {
-            background-color: white;
+            // background-color: white;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
@@ -169,6 +169,7 @@ aside {
 // Homepage Header
 #mainNav{
     height: 86px;
+    background-color: white;
     .navbar-collapse{
         padding-top: 15px;
     }
@@ -441,4 +442,80 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
+
+.course-detail-container{
+    position: absolute;
+    width: 100%;
+    // background-color: #7c7c7c9d;
+    height: 100%;
+    .course-detail{
+        margin-top: 8%;
+    }
+}
+
+.course-listing{
+    position: absolute;
+    // top: 30%;
+    // align-items: center;
+    width: 100%;
+    height: 100%;
+    .courses-container{
+        margin-top: 8%;
+        // position:absolute;
+        .title{
+            margin-bottom: 2rem;
+        }
+        .panel-footer{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 106px;
+            gap: 1rem;
+            justify-content: center;
+        }
+    }
+    
+}
+
+/* Course Listing Styles */
+.course-card {
+    margin-bottom: 30px;
+    min-height: 350px;
+  }
+  
+  .course-card .panel-heading {
+    background: #2c3e50;
+    color: white;
+  }
+  
+  .course-meta {
+    margin-bottom: 15px;
+  }
+  
+  .course-highlights {
+    padding-left: 20px;
+  }
+  
+  /* Course Detail Styles */
+  .course-detail h1 {
+    color: #2c3e50;
+  }
+  
+  .curriculum-section .media {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .panel-info .panel-heading {
+    background: #3498db;
+    color: white;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .course-card {
+      min-height: auto;
+    }
+  }
 

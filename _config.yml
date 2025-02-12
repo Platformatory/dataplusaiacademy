@@ -12,5 +12,10 @@ phone_number: +919353003282
 email: enroll@dataplusai.academy
 g_form: https://forms.gle/33fP2SVgTijNKz8S8
 
+collections:
+  courses:
+    output: true
+    permalink: /courses/:path/
+
 # Build settings
 markdown: kramdown
