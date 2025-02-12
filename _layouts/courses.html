@@ -11,14 +11,14 @@ title: Data+AI Academy Courses
           {% for course in sorted_courses %}
           <div class="card">
               <img
-                  src="{{ course.image }}"
+                  src="{{ course.image | relative_url }}"
                   alt="{{ course.title }}"
                   class="card-image"
               />
               <div class="card-content">
                   <h2 class="card-title">{{ course.title }}</h2>
                   <p class="card-subtitle">{{ course.subtitle }}</p>
-                  <a href="{{ course.url }}" class="card-link">Learn more →</a>
+                  <a href="{{ course.url | relative_url }}" class="card-link">Learn more →</a>
               </div>
           </div>
           {% endfor %}
