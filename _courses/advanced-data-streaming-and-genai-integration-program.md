@@ -1,6 +1,6 @@
 ---
 layout: course
-title: "Advanced Data Streaming and GenAI Integration Program"
+title: "Advanced Data Streaming and GenAI Program"
 subtitle: "Build real-time data streaming and AI-driven applications"
 
 highlights:
