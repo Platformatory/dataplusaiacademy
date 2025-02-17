@@ -22,15 +22,15 @@ why_attend:
 why_data_ai_academy:
   - "Practitioner-led training"
   - "Hands-on exposure to debugging and analysis"
-  - "Weekly interaction with Data Infrastructure experts"
+  - "Regular interaction with Data Infrastructure experts"
   - "Hands-on Project - define, design, and build custom projects with Data Infrastructure and GenAI"
-  - "Weekly 1:1 mentoring sessions for project and career guidance"
+  - "Weekly 1:1 mentoring session for project and career guidance"
 
 duration_delivery:
   - "Duration: 3 Months"
   - "Live Online or In-person"
   - "Classes on Mon, Wed, and Thu (9:30am to 1pm)"
-  - "Weekly Masterclass by industry experts"
+  - "Regular Masterclass by industry experts"
   
 image: "/img/real-time-data.jpg"
 upcoming_batches:

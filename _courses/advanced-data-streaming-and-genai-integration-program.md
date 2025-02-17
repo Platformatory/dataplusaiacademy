@@ -27,13 +27,14 @@ why_attend:
 why_data_ai_academy:
   - "Practitioner-led training"
   - "Hands-on exposure to debugging and analysis"
-  - "Weekly interaction with Data Infrastructure experts"
+  - "Regular interaction with Data Infrastructure experts"
   - "Hands-on Project - define, design, and build custom projects with Data Infrastructure, Streaming, and GenAI"
-  - "Weekly 1:1 mentoring sessions for project and career guidance"
+  - "Weekly 1:1 mentoring session for project and career guidance"
 
 duration_delivery:
   - "Duration: 6 months, Part-time"
-  - "Live Online on Saturdays (9:30am to 1pm) and open-office hours and masterclasses during the week"
+  - "Live Online on Saturdays (9:30am to 1pm) and open-office hours during the week"
+  - "Regular Masterclass by industry experts"
   - "Weekly 1:1 mentoring for career development"
   
 image: "/img/advanced-data-streaming.jpg"
