@@ -2,7 +2,7 @@
 layout: course
 title: "Real-Time Data Bootcamp"
 subtitle: "Unlock the power of Data Streaming and AI"
-
+description: "Unlock the power of Data Streaming and AI"
 highlights:
   - "3-month comprehensive program designed and taught by Platform & Data Practitioners"
   - "Learn and know how to build real-time data pipelines with Confluent, Kafka Connect, and Flink SQL"

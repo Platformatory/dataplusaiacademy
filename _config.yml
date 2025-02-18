@@ -17,5 +17,15 @@ collections:
     output: true
     permalink: /courses/:path/
 
+seo:
+  meta_og_title: "Data+AI Academy"
+  meta_og_type: "website"
+  meta_og_url: "https://dataplusai.academy/"
+  meta_og_image: "https://dataplusai.academy/img/data-plus-ai.svg"
+  meta_og_description: "Practitioner-led learning program focussed on building real-time data streaming platforms and applications."
+  meta_twitter_card: "summary"
+  meta_twitter_site: "@dataplusai"
+  meta_twitter_creator: "@dataplusai"
+
 # Build settings
 markdown: kramdown

@@ -2,7 +2,7 @@
 layout: course
 title: "Advanced Data Streaming and GenAI Program"
 subtitle: "Build real-time data streaming and AI-driven applications"
-
+description: "Unlock the power of Data Streaming and AI"
 highlights:
   - "6-month comprehensive program designed and taught by Platform & Data Practitioners"
   - "Learn and know how to build data pipelines with Apache Kafka"

@@ -3,10 +3,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Data+AI Academy</title>
+    <title>
+        {% if page.title %}{{page.title}} {% endif %} | {{ site.title | escape }}
+    </title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+
+    <!-- og tag -->
+
+    <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
+    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+    <meta
+      property="og:url"
+      content="{{site.url}}{{ page.url | split: '/' | join: '/' }}"
+    />
+    <meta property="og:image" content="{{site.url}}{{ page.image }}" />
+    <meta
+      property="og:description"
+      content="{{ page.description }}"
+    />
+    <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
+    <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
+    <meta
+      name="twitter:creator"
+      content="{{ site.seo.meta_twitter_creator }}"
+    />
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ 'css/bootstrap.min.css' | relative_url }}" type="text/css">
