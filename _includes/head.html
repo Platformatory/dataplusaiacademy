@@ -24,21 +24,22 @@
   gtag('event', 'page_view', {
     sendHitTask: function(sendModel) {
       var payload = sendModel.get('hitPayload');
-      
+      console.log(arguments);
       // Create and send request to Confluent Cloud REST Proxy
       var request = new XMLHttpRequest();
-      request.open('POST', 'https://pkc-41p56.asia-south1.gcp.confluent.cloud:443/kafka/v3/clusters/lkc-do6r3z/topics/topic_4', true);
+      request.open('POST', 'https://pkc-41p56.asia-south1.gcp.confluent.cloud:443/kafka/v3/clusters/lkc-do6r3z/topics/topic_4/records', true);
       request.setRequestHeader('Content-type', 'application/vnd.kafka.json.v2+json');
 
       request.setRequestHeader('Authorization', 'Basic UkFXN0RHTDZUM0hITkFZUzp3Yzl6ZWF2cWRkNHdib1FQd3NObGl2a2ZDbXh5dk1zZkNXQjFtcnd3dGZMV05xV3JlTFRnU2c2SU1QcXhKTmhJ');
 
       // Send Kafka message with the hit payload
       var kafkaMessage = {
-        records: [
-          {
-            value: payload
-          }
-        ]
+          
+            value: {
+                type: "JSON",
+                data: payload
+            }
+          
       };
       
       request.send(JSON.stringify(kafkaMessage));
