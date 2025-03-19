@@ -28,13 +28,13 @@ why_data_ai_academy:
 
 duration_delivery:
   - "Duration: 3 Months"
-  - "Live Online or In-person"
+  - "In-person"
   - "Classes on Mon, Wed, and Thu (9:30am to 1pm)"
   - "Regular Masterclass by industry experts"
   
 image: "/img/real-time-data.jpg"
 upcoming_batches:
-  start_date: "March 2025"
+  start_date: "May 2025"
 weight: 1
 
 ---
