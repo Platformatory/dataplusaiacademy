@@ -6,12 +6,10 @@ description: "Build real-time data streaming and AI-driven applications"
 highlights:
   - "6-month comprehensive program designed and taught by Platform & Data Practitioners"
   - "Learn and know how to build data pipelines with Apache Kafka"
-  - "Run Data operations with Terraform and Kubernetes"
-  - "Apache Flink - Streaming and Batch Processing"
-  - "Durable execution and processing"
-  - "Operate and build on Kafka (Event-driven applications)"
-  - "Real-time analytics"
-  - "Explore Data Lakehouse architecture"
+  - "Stream processing with Kafka Streams and Apache Flink"
+  - "Durable execution and processing with Temporal"
+  - "Real-time analytics using ClickHouse"
+  - "Explore Data Lakehouse architecture with Databricks"
   - "Build GenAI applications leveraging LLM APIs"
 
 who_can_attend:
