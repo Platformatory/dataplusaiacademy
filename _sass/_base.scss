@@ -327,6 +327,52 @@ header {
     align-items: center;
 }
 
+/* Flex Direction Classes */
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+/* Responsive Flex Direction */
+@media (min-width: 576px) {
+    .flex-sm-column {
+        flex-direction: column;
+    }
+    .flex-sm-row {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .flex-md-column {
+        flex-direction: column;
+    }
+    .flex-md-row {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    .flex-lg-column {
+        flex-direction: column;
+    }
+    .flex-lg-row {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .flex-xl-column {
+        flex-direction: column;
+    }
+    .flex-xl-row {
+        flex-direction: row;
+    }
+}
+
 
 .portfolio-box {
     position: relative;
