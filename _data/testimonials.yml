@@ -1,0 +1,9 @@
+# Testimonial videos configuration
+# Add new video files here to automatically include them in the carousel
+videos:
+  - name: "ShriVeena"
+    filename: "ShriVeena.webm"
+    title: "Shri Veena Testimonial"
+  - name: "NandanHebbar"
+    filename: "NandanHebbar.webm"
+    title: "Nandan Hebbar Testimonial"

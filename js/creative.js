@@ -89,7 +89,7 @@
 
     // Pure CSS Carousel Functionality
     let currentSlideIndex = 0;
-    const totalSlides = 2;
+    let totalSlides = 0;
     let autoSlideInterval;
 
     // Initialize carousel
@@ -97,14 +97,22 @@
         const carousel = document.querySelector('.css-carousel');
         if (!carousel) return;
         
-        const duration = parseInt(carousel.getAttribute('data-duration')) || 8;
-        
-        // Start auto-slide
-        startAutoSlide(duration);
-        
-        // Pause on hover
-        carousel.addEventListener('mouseenter', stopAutoSlide);
-        carousel.addEventListener('mouseleave', () => startAutoSlide(duration));
+        // Wait for dynamic content to load
+        setTimeout(() => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            totalSlides = slides.length;
+            
+            if (totalSlides === 0) return; // No slides loaded yet
+            
+            const duration = parseInt(carousel.getAttribute('data-duration')) || 8;
+            
+            // Start auto-slide
+            startAutoSlide(duration);
+            
+            // Pause on hover
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', () => startAutoSlide(duration));
+        }, 100);
     }
 
     // Auto-slide functionality
@@ -129,9 +137,16 @@
         
         if (!slides.length) return;
         
+        // Update totalSlides in case it changed
+        totalSlides = slides.length;
+        
         // Remove active class from current slide and indicator
-        slides[currentSlideIndex].classList.remove('active');
-        indicators[currentSlideIndex].classList.remove('active');
+        if (slides[currentSlideIndex]) {
+            slides[currentSlideIndex].classList.remove('active');
+        }
+        if (indicators[currentSlideIndex]) {
+            indicators[currentSlideIndex].classList.remove('active');
+        }
         
         // Calculate new slide index
         currentSlideIndex += direction;
@@ -144,8 +159,12 @@
         }
         
         // Add active class to new slide and indicator
-        slides[currentSlideIndex].classList.add('active');
-        indicators[currentSlideIndex].classList.add('active');
+        if (slides[currentSlideIndex]) {
+            slides[currentSlideIndex].classList.add('active');
+        }
+        if (indicators[currentSlideIndex]) {
+            indicators[currentSlideIndex].classList.add('active');
+        }
     };
 
     // Go to specific slide
@@ -153,18 +172,31 @@
         const slides = document.querySelectorAll('.carousel-slide');
         const indicators = document.querySelectorAll('.indicator');
         
-        if (!slides.length || slideNumber < 1 || slideNumber > totalSlides) return;
+        if (!slides.length) return;
+        
+        // Update totalSlides in case it changed
+        totalSlides = slides.length;
+        
+        if (slideNumber < 1 || slideNumber > totalSlides) return;
         
         // Remove active class from current slide and indicator
-        slides[currentSlideIndex].classList.remove('active');
-        indicators[currentSlideIndex].classList.remove('active');
+        if (slides[currentSlideIndex]) {
+            slides[currentSlideIndex].classList.remove('active');
+        }
+        if (indicators[currentSlideIndex]) {
+            indicators[currentSlideIndex].classList.remove('active');
+        }
         
         // Set new slide index
         currentSlideIndex = slideNumber - 1;
         
         // Add active class to new slide and indicator
-        slides[currentSlideIndex].classList.add('active');
-        indicators[currentSlideIndex].classList.add('active');
+        if (slides[currentSlideIndex]) {
+            slides[currentSlideIndex].classList.add('active');
+        }
+        if (indicators[currentSlideIndex]) {
+            indicators[currentSlideIndex].classList.add('active');
+        }
     };
 
     // Initialize carousel when document is ready

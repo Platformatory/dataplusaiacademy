@@ -53,7 +53,7 @@ $theme-section-bg: #031d2f;
 .testimonial-card {
     background: white;
     border-radius: 15px;
-    border: 1px solid #e0e0e0;
+    // border: 1px solid #e0e0e0;
     overflow: hidden;
     height: 100%;
     min-height: 600px;
@@ -66,14 +66,19 @@ $theme-section-bg: #031d2f;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 320px;
     
     .testimonial-video {
         width: 100%;
         height: 100%;
         min-height: 600px;
+        min-width: 320px;
         object-fit: cover;
         transition: transform 0.3s ease;
         background: #000;
+        border-radius: 12px;
     }
     
     &:hover .testimonial-video {
@@ -93,16 +98,24 @@ $theme-section-bg: #031d2f;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
+        cursor: pointer;
+        z-index: 10;
+        -webkit-tap-highlight-color: transparent;
         
         i {
             color: white;
             font-size: 30px;
             margin-left: 5px; /* Slight offset for play icon */
+            pointer-events: none;
         }
         
         &:hover {
             background: rgba(3, 80, 182, 0.9);
             transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        &:active {
+            transform: translate(-50%, -50%) scale(0.95);
         }
     }
 }
@@ -165,10 +178,16 @@ $theme-section-bg: #031d2f;
         transition: all 0.3s ease;
         pointer-events: auto;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
         
         &:hover {
             background: darken($theme-primary, 10%);
             transform: scale(1.1);
+        }
+        
+        &:active {
+            transform: scale(0.95);
         }
         
         &.prev {
@@ -196,6 +215,8 @@ $theme-section-bg: #031d2f;
         background: #ddd;
         cursor: pointer;
         transition: all 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
         
         &.active {
             background: $theme-primary;
@@ -206,55 +227,140 @@ $theme-section-bg: #031d2f;
             background: $theme-primary;
             opacity: 0.7;
         }
+        
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     #testimonials {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     
     .testimonial-card {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         max-width: 100%;
+        padding: 0 10px;
+        min-width: 320px;
+        display: flex;
+        justify-content: center;
     }
     
-    .video-container .testimonial-video {
-        height: 300px;
-        min-height: 300px;
+    .video-container {
+        border-radius: 8px;
+        overflow: hidden;
+        min-width: 320px;
+        max-width: 380px;
+        
+        .testimonial-video {
+            height: 600px;
+            min-height: 600px;
+            width: 100%;
+            // min-width: 320px;
+        }
+        
+        .play-button {
+            width: 60px;
+            height: 60px;
+            
+            i {
+                font-size: 24px;
+            }
+        }
     }
     
     .css-carousel {
         .carousel-btn {
-            width: 40px;
-            height: 40px;
-            font-size: 14px;
+            width: 35px;
+            height: 35px;
+            font-size: 12px;
+            top: 50%;
+            transform: translateY(-50%);
             
             &.prev {
-                margin-left: 10px;
+                left: 5px;
             }
             
             &.next {
-                margin-right: 10px;
+                right: 5px;
+            }
+        }
+        
+        .carousel-indicators {
+            bottom: 10px;
+            
+            .indicator {
+                width: 8px;
+                height: 8px;
+                margin: 0 4px;
+            }
+        }
+    }
+    
+    // Ensure single video per slide on mobile
+    .carousel-slide .row .col-12 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: 320px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #testimonials {
+        padding: 30px 0;
+    }
+    
+    .testimonial-card {
+        padding: 0 5px;
+        margin-bottom: 15px;
+        min-width: 320px;
+    }
+    
+    .video-container {
+        min-width: 320px;
+        
+        .testimonial-video {
+            height: 600px;
+            min-height: 600px;
+            min-width: 320px;
+        }
+        
+        .play-button {
+            width: 50px;
+            height: 50px;
+            
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .css-carousel {
+        .carousel-btn {
+            width: 30px;
+            height: 30px;
+            font-size: 10px;
+        }
+        
+        .carousel-indicators {
+            bottom: 5px;
+            
+            .indicator {
+                width: 6px;
+                height: 6px;
+                margin: 0 3px;
             }
         }
     }
 }
 
-@media (max-width: 992px) {
-    .testimonial-card {
-        max-width: 100%;
-    }
-    
-    .video-container .testimonial-video {
-        height: 400px;
-        min-height: 400px;
-    }
-}
-
-@media (min-width: 993px) {
+@media (min-width: 993px) and (max-width: 1199px) {
     .testimonial-card {
         max-width: 380px;
     }
@@ -262,6 +368,31 @@ $theme-section-bg: #031d2f;
     .video-container .testimonial-video {
         height: 100%;
         min-height: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .testimonial-card {
+        max-width: 350px;
+        min-width: 300px;
+    }
+    
+    .video-container {
+        max-width: 350px;
+        min-width: 300px;
+        
+        .testimonial-video {
+            height: 100%;
+            min-height: 500px;
+        }
+    }
+    
+    .css-carousel {
+        .carousel-btn {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+        }
     }
 }
 .plf-logo{
