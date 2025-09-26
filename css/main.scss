@@ -1,6 +1,3 @@
----
----
-
 @charset "utf-8";
 
 // Example Defaults
@@ -40,8 +37,8 @@ $theme-section-bg: #031d2f;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "mixins",
-        "base"
+        "../_sass/mixins",
+        "../_sass/base"
 ;
 
 /* Testimonials Section Styles */
@@ -398,4 +395,547 @@ $theme-section-bg: #031d2f;
 .plf-logo{
     margin-top: 46px;
     margin-left: -15px;
+}
+
+/* Scholarship Page Styles */
+.scholarship-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    
+    .scholarship-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        line-height: 1.2;
+    }
+    
+    .contact-info {
+        font-size: 1.2rem;
+        line-height: 2;
+        
+        p {
+            margin: 10px 0;
+        }
+    }
+}
+
+.bootcamp-highlights,
+.who-can-attend,
+.why-attend,
+.why-data-ai-academy,
+.duration-delivery,
+.batches-fees {
+    padding: 80px 0;
+    
+    &:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    
+    .section-heading {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        color: #333;
+        text-align: center;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            
+            &:before {
+                content: "—";
+                position: absolute;
+                left: 0;
+                color: $theme-primary;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.application-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    
+    .section-heading {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .application-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 200px;
+            flex: 1;
+            
+            i {
+                font-size: 1.2rem;
+            }
+            
+            &.btn-primary {
+                background: white;
+                color: $theme-primary;
+                border: 2px solid white;
+                
+                &:hover {
+                    background: transparent;
+                    color: white;
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+            }
+            
+            &.btn-outline-primary {
+                background: transparent;
+                color: white;
+                border: 2px solid white;
+                
+                &:hover {
+                    background: white;
+                    color: $theme-primary;
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+            }
+        }
+    }
+}
+
+.faq-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    
+    .section-heading {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .faq-header {
+        margin-bottom: 50px;
+        
+        h3 {
+            font-size: 2rem;
+            color: $theme-primary;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+    }
+    
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .faq-item {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $theme-primary;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        ol, ul {
+            padding-left: 20px;
+            
+            li {
+                font-size: 1.1rem;
+                line-height: 1.7;
+                margin-bottom: 8px;
+                color: #333;
+            }
+        }
+    }
+}
+
+/* Responsive Design for Scholarship Page */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .scholarship-hero {
+        padding: 80px 0;
+        
+        .scholarship-title {
+            font-size: 3rem;
+        }
+    }
+    
+    .bootcamp-highlights,
+    .who-can-attend,
+    .why-attend,
+    .why-data-ai-academy,
+    .duration-delivery,
+    .batches-fees {
+        padding: 60px 0;
+    }
+    
+    .faq-item {
+        padding: 25px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) and (min-width: 769px) {
+    .scholarship-hero {
+        padding: 70px 0;
+        
+        .scholarship-title {
+            font-size: 2.8rem;
+        }
+        
+        .contact-info {
+            font-size: 1.1rem;
+        }
+    }
+    
+    .bootcamp-highlights,
+    .who-can-attend,
+    .why-attend,
+    .why-data-ai-academy,
+    .duration-delivery,
+    .batches-fees {
+        padding: 60px 0;
+        
+        .section-heading {
+            font-size: 2.2rem;
+        }
+        
+        ul li {
+            font-size: 1.05rem;
+        }
+    }
+    
+    .application-section {
+        padding: 60px 0;
+        
+        .section-heading {
+            font-size: 2.2rem;
+        }
+        
+        .application-buttons {
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    .faq-section {
+        padding: 60px 0;
+        
+        .section-heading {
+            font-size: 2.2rem;
+        }
+        
+        .faq-header h3 {
+            font-size: 1.7rem;
+        }
+        
+        .faq-item {
+            padding: 25px;
+            
+            h4 {
+                font-size: 1.2rem;
+            }
+            
+            p, ol li, ul li {
+                font-size: 1.05rem;
+            }
+        }
+    }
+}
+
+/* Mobile Landscape and Small Tablets */
+@media (max-width: 768px) and (min-width: 481px) {
+    .scholarship-hero {
+        padding: 60px 0;
+        
+        .scholarship-title {
+            font-size: 2.5rem;
+        }
+        
+        .contact-info {
+            font-size: 1rem;
+        }
+    }
+    
+    .bootcamp-highlights,
+    .who-can-attend,
+    .why-attend,
+    .why-data-ai-academy,
+    .duration-delivery,
+    .batches-fees {
+        padding: 50px 0;
+        
+        .section-heading {
+            font-size: 2rem;
+        }
+        
+        ul li {
+            font-size: 1rem;
+            padding-left: 25px;
+        }
+    }
+    
+    .application-section {
+        padding: 50px 0;
+        
+        .section-heading {
+            font-size: 2rem;
+        }
+        
+        .application-buttons {
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    }
+    
+    .faq-section {
+        padding: 50px 0;
+        
+        .section-heading {
+            font-size: 2rem;
+        }
+        
+        .faq-header h3 {
+            font-size: 1.5rem;
+        }
+        
+        .faq-item {
+            padding: 20px;
+            
+            h4 {
+                font-size: 1.1rem;
+            }
+            
+            p, ol li, ul li {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .scholarship-hero {
+        padding: 50px 0;
+        
+        .scholarship-title {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+        
+        .contact-info {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    }
+    
+    .bootcamp-highlights,
+    .who-can-attend,
+    .why-attend,
+    .why-data-ai-academy,
+    .duration-delivery,
+    .batches-fees {
+        padding: 40px 0;
+        
+        .section-heading {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        ul li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+    }
+    
+    .application-section {
+        padding: 40px 0;
+        
+        .section-heading {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        .application-buttons {
+            .btn {
+                padding: 15px 20px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 280px;
+                border-radius: 25px;
+            }
+        }
+    }
+    
+    .faq-section {
+        padding: 40px 0;
+        
+        .section-heading {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        .faq-header {
+            margin-bottom: 30px;
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        .faq-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            
+            h4 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
+            p, ol li, ul li {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            ol, ul {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .scholarship-hero {
+        padding: 40px 0;
+        
+        .scholarship-title {
+            font-size: 1.8rem;
+        }
+        
+        .contact-info {
+            font-size: 0.9rem;
+        }
+    }
+    
+    .bootcamp-highlights,
+    .who-can-attend,
+    .why-attend,
+    .why-data-ai-academy,
+    .duration-delivery,
+    .batches-fees {
+        padding: 35px 0;
+        
+        .section-heading {
+            font-size: 1.6rem;
+        }
+        
+        ul li {
+            font-size: 0.9rem;
+            padding-left: 18px;
+        }
+    }
+    
+    .application-section {
+        padding: 35px 0;
+        
+        .section-heading {
+            font-size: 1.6rem;
+        }
+        
+        .application-buttons .btn {
+            padding: 12px 15px;
+            font-size: 0.95rem;
+            max-width: 250px;
+        }
+    }
+    
+    .faq-section {
+        padding: 35px 0;
+        
+        .section-heading {
+            font-size: 1.6rem;
+        }
+        
+        .faq-item {
+            padding: 12px;
+            
+            h4 {
+                font-size: 0.95rem;
+            }
+            
+            p, ol li, ul li {
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
