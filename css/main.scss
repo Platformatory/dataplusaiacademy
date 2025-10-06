@@ -1,3 +1,8 @@
+---
+---
+
+@use "sass:color";
+
 @charset "utf-8";
 
 // Example Defaults
@@ -37,8 +42,8 @@ $theme-section-bg: #031d2f;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "../_sass/mixins",
-        "../_sass/base"
+        "mixins",
+        "base"
 ;
 
 /* Testimonials Section Styles */
@@ -179,7 +184,7 @@ $theme-section-bg: #031d2f;
         touch-action: manipulation;
         
         &:hover {
-            background: darken($theme-primary, 10%);
+            background: color.adjust($theme-primary, $lightness: -10%);
             transform: scale(1.1);
         }
         
@@ -393,7 +398,7 @@ $theme-section-bg: #031d2f;
     }
 }
 .plf-logo{
-    margin-top: 46px;
+    margin-top: 40px;
     margin-left: -15px;
 }
 

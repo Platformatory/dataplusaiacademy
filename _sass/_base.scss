@@ -1,3 +1,5 @@
+@use "sass:color";
+
 html,
 body {
     height: 100%;
@@ -23,7 +25,7 @@ a {
     color: $theme-primary;
     &:hover,
     &:focus {
-        color: darken($theme-primary, 10%);
+        color: color.adjust($theme-primary, $lightness: -10%);
     }
 }
 
@@ -100,7 +102,7 @@ aside {
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken($theme-primary, 10%);
+            color: color.adjust($theme-primary, $lightness: -10%);
         }
     }
     .nav {
@@ -152,7 +154,7 @@ aside {
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    color: color.adjust($theme-primary, $lightness: -10%);
                 }
             }
             .nav > li > a,
