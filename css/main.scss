@@ -1,8 +1,6 @@
 ---
 ---
 
-@use "sass:color";
-
 @charset "utf-8";
 
 // Example Defaults
@@ -184,7 +182,7 @@ $theme-section-bg: #031d2f;
         touch-action: manipulation;
         
         &:hover {
-            background: color.adjust($theme-primary, $lightness: -10%);
+            background: darken($theme-primary, 10%);
             transform: scale(1.1);
         }
         
