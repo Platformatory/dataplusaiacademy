@@ -5,141 +5,65 @@ description: "Join our 3-month comprehensive bootcamp with scholarship opportuni
 permalink: /scholarship/
 ---
 
-<!-- Scholarship Hero Section -->
+<link rel="stylesheet" href="/css/carousel.css">
+
+<!-- Scholarship Hero Section with Carousel -->
 <section class="scholarship-hero">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="scholarship-title">Data+AI Academy Bootcamp</h1>
-                <div class="contact-info">
-                    <p><strong>Contact Us</strong></p>
-                    <p>— enroll@dataplusaiacademy.com</p>
-                    <p>— www.dataplusai.academy</p>
-                    <p>— +91-93530-16950</p>
+            <div class="col-lg-12 mt-3">
+                <!-- Bootcamp Slides Carousel -->
+                <div class="bootcamp-carousel-wrapper">
+                    <!-- Slides Container -->
+                    <div class="carousel-slides" id="carouselSlides">
+                        <img src="/img/bootcamp-slides/Bootcamp_Highlights_0000.png" class="carousel-slide active" alt="Bootcamp Highlights Slide 1">
+                        <img src="/img/bootcamp-slides/Bootcamp_Highlights_0001.png" class="carousel-slide" alt="Bootcamp Highlights Slide 2">
+                        <img src="/img/bootcamp-slides/Bootcamp_Highlights_0002.png" class="carousel-slide" alt="Bootcamp Highlights Slide 3">
+                        <img src="/img/bootcamp-slides/Bootcamp_Highlights_0003.png" class="carousel-slide" alt="Bootcamp Highlights Slide 4">
+                        <img src="/img/bootcamp-slides/Bootcamp_Highlights_0005.png" class="carousel-slide" alt="Bootcamp Highlights Slide 5">
+                        <img src="/img/bootcamp-slides/Bootcamp_Highlights_0006.png" class="carousel-slide" alt="Bootcamp Highlights Slide 6">
+                    </div>
+                    
+                    <!-- Left and Right Navigation Buttons (PPT Style) -->
+                    <button class="carousel-nav-btn carousel-prev" onclick="changeSlide(-1)" aria-label="Previous slide">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav-btn carousel-next" onclick="changeSlide(1)" aria-label="Next slide">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Slide Counter -->
+                    <div class="slide-counter">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">6</span>
+                    </div>
+                    
+                    <!-- Slide Indicators (Dots) -->
+                    <div class="carousel-indicators-custom">
+                        <span class="indicator-dot active" onclick="goToSlide(0)"></span>
+                        <span class="indicator-dot" onclick="goToSlide(1)"></span>
+                        <span class="indicator-dot" onclick="goToSlide(2)"></span>
+                        <span class="indicator-dot" onclick="goToSlide(3)"></span>
+                        <span class="indicator-dot" onclick="goToSlide(4)"></span>
+                        <span class="indicator-dot" onclick="goToSlide(5)"></span>
+                    </div>
                 </div>
+                    
             </div>
         </div>
     </div>
 </section>
 
-<!-- Bootcamp Highlights -->
-<section class="bootcamp-highlights">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Bootcamp Highlights</h2>
-                <div class="highlights-list">
-                    <ul>
-                        <li>3-month comprehensive program designed and taught by experienced Platform & Data Practitioners</li>
-                        <li>Learn to build real-time data pipelines with Confluent, Kafka Connect, and Flink SQL</li>
-                        <li>Master data stream transformations using Flink SQL</li>
-                        <li>Get hands-on with Temporal for workflow orchestration</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Who Can Attend -->
-<section class="who-can-attend">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Who Can Attend?</h2>
-                <div class="attend-list">
-                    <ul>
-                        <li>Anyone with a keen interest in entering the world of Data Engineering</li>
-                        <li>Ideal if you have some exposure to Programming, Databases, or Networking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Attend -->
-<section class="why-attend">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Why Attend This Bootcamp?</h2>
-                <div class="attend-reasons">
-                    <ul>
-                        <li>Unlock opportunities in the fast-growing data infrastructure & streaming space</li>
-                        <li>With the rise of AI, the demand for skilled Platform & Data Engineers is only increasing</li>
-                        <li>Gain an edge over others through hands-on projects and real-world problem solving</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Data+AI Academy -->
-<section class="why-data-ai-academy">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Why Data+AI Academy?</h2>
-                <div class="academy-benefits">
-                    <ul>
-                        <li>Practitioner-led training with real-world relevance</li>
-                        <li>Deep hands-on exposure to debugging, troubleshooting, and analysis</li>
-                        <li>Regular interaction with industry experts in Data Infrastructure</li>
-                        <li>Work on custom projects designed around Data Engineering platforms and GenAI</li>
-                        <li>Get weekly 1:1 mentoring sessions for project support and career guidance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Duration & Delivery -->
-<section class="duration-delivery">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Duration & Delivery</h2>
-                <div class="delivery-info">
-                    <ul>
-                        <li><strong>Length:</strong> 3 Months</li>
-                        <li><strong>Location:</strong> In-person, Bangalore</li>
-                        <li><strong>Schedule:</strong> Monday to Friday (sessions, assignments, and projects included)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Upcoming Batches & Fees -->
-<section class="batches-fees">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Upcoming Batches & Fees</h2>
-                <div class="fees-info">
-                    <ul>
-                        <li><strong>Price:</strong> INR 60,000 (incl. taxes)</li>
-                        <li><strong>Scholarships available</strong> — write to us to know more!</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<script src="/js/carousel.js"></script>
 
 <!-- Application Section -->
 <section class="application-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Apply Now</h2>
+                <!-- <h2 class="section-heading">Apply Now</h2> -->
                 <div class="application-buttons">
                     <a href="https://forms.gle/cHtoVWkk5dx5EiSSA" class="btn btn-primary btn-lg" target="_blank">
-                        <i class="fa fa-file-text"></i> Apply via Google Form
+                        <i class="fa fa-file-text"></i> Apply Now
                     </a>
                 </div>
             </div>
