@@ -29,7 +29,8 @@
     <div id="testimonials-container"></div>
     <div id="features-container"></div>
     <div id="mentors-container"></div>
-    <div id="comparison-container"></div>
+    <div id="us-vs-them-container"></div>
+    <!-- <div id="comparison-container"></div> -->
     <div id="courses-container"></div>
     <div id="faq-container"></div>
     <div id="footer-container"></div>
@@ -44,6 +45,7 @@
             { id: 'testimonials-container', file: 'sections/testimonials.html' },
             { id: 'features-container', file: 'sections/features.html' },
             { id: 'mentors-container', file: 'sections/mentors.html' },
+            { id: 'us-vs-them-container', file: 'sections/us_vs_them.html' },
             { id: 'comparison-container', file: 'sections/comparison.html' },
             { id: 'courses-container', file: 'sections/courses.html' },
             { id: 'faq-container', file: 'sections/faq.html' },
@@ -133,46 +135,30 @@
         // Global Utility Functions (Tabs & FAQ)
 
         // Tab Switch Logic
-        function switchTab(tab) {
+        // Tab Switch Logic
+        function switchTab(selectedTab) {
+            const tabs = ['bootcamp', 'advanced', 'distributed'];
             const displayClasses = ['bg-green-600', 'text-white', 'shadow-md'];
             const hiddenClasses = ['text-gray-600', 'hover:text-gray-900'];
 
-            const btnBootcamp = document.getElementById('tab-bootcamp');
-            const btnAdvanced = document.getElementById('tab-advanced');
-            const contentBootcamp = document.getElementById('content-bootcamp');
-            const contentAdvanced = document.getElementById('content-advanced');
+            tabs.forEach(tab => {
+                const btn = document.getElementById(`tab-${tab}`);
+                const content = document.getElementById(`content-${tab}`);
 
-            if (!btnBootcamp || !btnAdvanced || !contentBootcamp || !contentAdvanced) return;
+                if (!btn || !content) return;
 
-            if (tab === 'bootcamp') {
-                // Update Buttons
-                displayClasses.forEach(c => {
-                    btnBootcamp.classList.add(c);
-                    btnAdvanced.classList.remove(c);
-                });
-                hiddenClasses.forEach(c => {
-                    btnBootcamp.classList.remove(c);
-                    btnAdvanced.classList.add(c);
-                });
-
-                // Update Content
-                contentBootcamp.classList.remove('hidden');
-                contentAdvanced.classList.add('hidden');
-            } else {
-                // Update Buttons
-                displayClasses.forEach(c => {
-                    btnAdvanced.classList.add(c);
-                    btnBootcamp.classList.remove(c);
-                });
-                hiddenClasses.forEach(c => {
-                    btnAdvanced.classList.remove(c);
-                    btnBootcamp.classList.add(c);
-                });
-
-                // Update Content
-                contentAdvanced.classList.remove('hidden');
-                contentBootcamp.classList.add('hidden');
-            }
+                if (tab === selectedTab) {
+                    // Active State
+                    displayClasses.forEach(c => btn.classList.add(c));
+                    hiddenClasses.forEach(c => btn.classList.remove(c));
+                    content.classList.remove('hidden');
+                } else {
+                    // Inactive State
+                    displayClasses.forEach(c => btn.classList.remove(c));
+                    hiddenClasses.forEach(c => btn.classList.add(c));
+                    content.classList.add('hidden');
+                }
+            });
         }
 
         // Accordion / FAQ Toggle Logic
