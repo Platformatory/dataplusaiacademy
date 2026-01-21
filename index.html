@@ -179,8 +179,26 @@
         }
 
 
+
         // Kick off the loading process
         document.addEventListener("DOMContentLoaded", loadSections);
+
+        // Interest Form Modal Logic
+        function openInterestForm() {
+            const modal = document.getElementById('interest-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeInterestForm() {
+            const modal = document.getElementById('interest-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore background scrolling
+            }
+        }
 
         // Razorpay Integration Logic
         function openCheckout(courseName, amountInPaise) {
@@ -214,6 +232,39 @@
         }
     </script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <!-- Interest Form Modal -->
+    <div id="interest-modal" class="fixed inset-0 z-[2000] hidden overflow-y-auto" aria-labelledby="modal-title"
+        role="dialog" aria-modal="true">
+        <!-- Backdrop -->
+        <div class="flex items-center justify-center min-h-screen p-4 text-center sm:p-0">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"
+                onclick="closeInterestForm()"></div>
+
+            <!-- Modal Panel -->
+            <!-- Centering trick removed in favor of flex centering -->
+            <div
+                class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-full max-w-5xl h-[90vh] flex flex-col">
+                <div class="bg-white px-4 py-3 border-b flex justify-between items-center shrink-0">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Express Interest</h3>
+                    <button type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none"
+                        onclick="closeInterestForm()">
+                        <span class="sr-only">Close</span>
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <!-- Iframe Container - Grow to fill remaining height -->
+                <div class="relative w-full flex-grow bg-gray-50">
+                    <iframe
+                        src="https://docs.google.com/forms/d/1yccMCV8t2DmlECKBY2pOtmS1fVomk2BLcGskeLWA-4Y/viewform?embedded=true"
+                        width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+                        class="absolute inset-0 w-full h-full">
+                        Loading…
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
