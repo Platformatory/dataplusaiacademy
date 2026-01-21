@@ -178,10 +178,42 @@
             }
         }
 
+
         // Kick off the loading process
         document.addEventListener("DOMContentLoaded", loadSections);
 
+        // Razorpay Integration Logic
+        function openCheckout(courseName, amountInPaise) {
+            var options = {
+                "key": "rzp_test_S6QW2Ce1DG3Csi",
+                "amount": amountInPaise.toString(),
+                "currency": "INR",
+                "name": "Data+AI Academy",
+                "description": "Enrollment for " + courseName,
+                "image": "img/logo.png", // Ensure you have a logo image or remove this line
+                "handler": function (response) {
+                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                    // Future: Send this ID to your Google Apps Script backend for verification
+                },
+                "prefill": {
+                    "name": "", // Can be prefilled if user is logged in
+                    "email": "",
+                    "contact": ""
+                },
+                "theme": {
+                    "color": "#16a34a" // Matches your green theme
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.on('payment.failed', function (response) {
+                alert("Payment Failed. Reason: " + response.error.description);
+            });
+            rzp1.open();
+            // Prevent default action
+            return false;
+        }
     </script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </body>
 
 </html>
