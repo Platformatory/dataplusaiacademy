@@ -14,151 +14,202 @@
             </h2>
         </div>
 
-        <!-- Comparison Cards Container -->
-        <div class="relative max-w-[1100px] mx-auto">
-
-            <!-- VS Badge (Desktop Center / Mobile Middle) -->
-            <div
-                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full border-[6px] border-[#F5FDF5] shadow-xl">
-                <span class="font-black text-xl md:text-2xl text-gray-900 italic">VS</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
-
-                <!-- Left Side (Us) - Emphasized -->
-                <div
-                    class="bg-[#050505] text-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden ring-1 ring-green-900/50 transform md:-translate-y-4 hover:transform hover:-translate-y-6 transition-transform duration-300">
-                    <!-- Glow effect -->
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-green-900/10 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none">
-                    </div>
-
-                    <!-- Brand -->
-                    <div class="mb-10 text-center relative z-10">
-                        <div
-                            class="inline-block bg-green-900/30 text-[#4ade80] text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-                            Recommended
-                        </div>
-                        <h3 class="text-3xl font-black uppercase tracking-widest text-white leading-none">
-                            Data + AI <br /> <span class="text-[#4ade80]">Academy</span>
-                        </h3>
-                    </div>
-
-                    <!-- List -->
-                    <div class="space-y-6 relative z-10">
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse bg-white rounded-2xl shadow-lg overflow-hidden">
+                <thead>
+                    <tr class="bg-[#050505]">
+                        <th class="text-left p-6 text-white font-bold text-lg border-r border-gray-700">Feature</th>
+                        <th
+                            class="text-center p-6 text-[#4ade80] font-bold text-lg border-r border-green-900 bg-green-950">
+                            Data + AI
+                            Academy</th>
+                        <th class="text-center p-6 text-gray-400 font-bold text-lg border-r border-gray-700">Online
+                            Courses / Video Platforms</th>
+                        <th class="text-center p-6 text-gray-400 font-bold text-lg">Traditional Training Center</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1: Coaching -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Coaching</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">Coaching by practitioners</span>
+                                <span class="text-sm text-gray-600 italic">Learn from people who've actually built real
+                                    systems, not just taught theory</span>
                             </div>
-                            <span class="font-medium text-base text-gray-200">Only Focused on Data Engineering</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Professional Content Creators</span>
                             </div>
-                            <span class="font-medium text-base text-gray-200">16 Weeks Immersive</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Professional trainers (usually not practitioners)</span>
                             </div>
-                            <span class="font-medium text-base text-gray-200">Fast, relevant, hands-on</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
-                            </div>
-                            <span class="font-medium text-base text-gray-200">Taught by active practitioners</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
-                            </div>
-                            <span class="font-medium text-base text-gray-200">Real-time Stack (Kafka, Flink)</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
-                            </div>
-                            <span class="font-medium text-base text-gray-200">Proven Career Success</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4">
-                            <div
-                                class="w-8 h-8 rounded-full bg-green-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-[#4ade80] text-sm"></i>
-                            </div>
-                            <span class="font-medium text-base text-gray-200">Exclusive 1:1 Mentorship</span>
-                        </div>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
 
-                <!-- Right Side (Them) - Muted -->
-                <div
-                    class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-200 shadow-sm relative opacity-90 hover:opacity-100 transition-opacity">
-                    <!-- Brand -->
-                    <div class="mb-10 text-center pt-8">
-                        <h3 class="text-2xl font-bold text-gray-400 uppercase tracking-widest leading-none">
-                            Generic <br /> Bootcamps
-                        </h3>
-                    </div>
+                    <!-- Row 2: Learning Format -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Learning Format</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">In-person and hybrid options</span>
+                                <span class="text-sm text-gray-600 italic">Better focus, real connection, and very
+                                    strong learning curve</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Fully Virtual</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-minus-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">In-person, classroom-style</span>
+                            </div>
+                        </td>
+                    </tr>
 
-                    <!-- List -->
-                    <div class="space-y-6">
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">All tech roles (Web, Data,
-                                UX)</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">12 Weeks / Self-paced</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">Slow, outdated, generic</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">No active industry
-                                experience</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">Legacy Stack (Hadoop, Spark
-                                2.x)</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">Mixed results</span>
-                        </div>
-                        <!-- Item -->
-                        <div class="flex items-start gap-4 text-gray-400">
-                            <i class="fas fa-times mt-1 text-lg w-6 text-center"></i>
-                            <span class="font-medium text-sm md:text-base text-gray-500">No personal guidance</span>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Row 3: Support -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Personal Support</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">Office hours for 1:1 feedback and personal
+                                    guidance</span>
+                                <span class="text-sm text-gray-600 italic">Someone will always be here to guide
+                                    you</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">1:N, broadcast only (with labs)</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">1:N broadcast only (low personal connect)</span>
+                            </div>
+                        </td>
+                    </tr>
 
-            </div>
+                    <!-- Row 4: Labs & Assignments -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Labs & Assignments</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">Personalized labs and assignments</span>
+                                <span class="text-sm text-gray-600 italic">Build real skills, not just finish
+                                    assignments</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Standard labs and assignments</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Standard labs and assignments</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 5: Projects -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Real-World Projects</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">Real-life projects and exposure to OSS
+                                    projects</span>
+                                <span class="text-sm text-gray-600 italic">Gain experience you can talk about in
+                                    interviews</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Only assignments</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Capstone projects have no real-life relevance</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 6: Career Support -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Career Support</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">Skin in the game. We hire top performers and
+                                    provide referrals</span>
+                                <span class="text-sm text-gray-600 italic">Your success matters to us. We have skin in
+                                    the game</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">No hiring conduit</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">No hiring. Only referral</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 7: Cohort Size -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-6 font-semibold text-gray-900 border-r border-gray-200">Cohort Size</td>
+                        <td class="p-6 text-center border-r border-green-200 bg-green-50">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                                <span class="font-medium text-gray-900">30-40 students</span>
+                                <span class="text-sm text-gray-600 italic">Small group, more attention, best
+                                    results</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center border-r border-gray-200">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Large audience</span>
+                            </div>
+                        </td>
+                        <td class="p-6 text-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-times-circle text-gray-400 text-2xl"></i>
+                                <span class="text-gray-500">Large audience</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
 </section>

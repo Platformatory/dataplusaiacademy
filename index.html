@@ -84,6 +84,9 @@
         }
 
         function initPage() {
+            // Typing Animation Logic
+            initTypingAnimation();
+
             // Counter Logic
             const counters = document.querySelectorAll(".counter");
             if (counters.length > 0) {
@@ -133,6 +136,50 @@
         }
 
         // Global Utility Functions (Tabs & FAQ)
+
+        // Typing Animation Logic
+        function initTypingAnimation() {
+            const typingElement = document.getElementById('typing-text');
+            if (!typingElement) return;
+
+            // The text content is already "Platform Engineer" initially, so we start entering the cycle
+            // actually we should clear it or start from it.
+            // Let's ensure smooth transition.
+
+            const phrases = ["Platform Engineer", "Data Engineer", "AI Engineer"];
+            let phraseIndex = 0;
+            let charIndex = phrases[0].length; // Start fully typed
+            let isDeleting = true; // Start by deleting after a pause
+            let typeSpeed = 100;
+
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+
+                if (isDeleting) {
+                    typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    typeSpeed = 50;
+                } else {
+                    typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    typeSpeed = 150;
+                }
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    typeSpeed = 2000; // Pause at full phrase
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    typeSpeed = 500; // Pause before new phrase
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+
+            // Initial delay before starting the delete cycle
+            setTimeout(type, 2000);
+        }
 
         // Tab Switch Logic
         // Tab Switch Logic
@@ -216,6 +263,12 @@
             return false;
         }
     </script>
+    <!-- WhatsApp Support Button -->
+    <a href="https://wa.me/919448451121" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group w-16 h-16">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 
