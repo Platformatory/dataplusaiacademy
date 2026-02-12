@@ -5,18 +5,24 @@
 
         <!-- Tab Navigation -->
         <div class="flex justify-center mb-10">
-            <div class="bg-gray-100 p-1.5 rounded-2xl md:rounded-full flex flex-col md:flex-row gap-2 w-full md:w-auto">
+            <div
+                class="bg-white md:bg-gray-100 p-0 md:p-1.5 rounded-none md:rounded-full flex flex-row items-center justify-center gap-4 md:gap-2 w-full md:w-auto">
                 <button onclick="switchTab('bootcamp')" id="tab-bootcamp"
-                    class="px-6 py-2.5 rounded-xl md:rounded-full text-sm font-semibold transition-all duration-300 bg-green-600 text-white shadow-md text-center">
-                    Real-Time Data Bootcamp
+                    class="w-10 h-10 md:w-auto md:h-auto md:px-6 md:py-2.5 rounded-full text-lg md:text-sm font-bold md:font-semibold transition-all duration-300 bg-green-600 text-white shadow-md text-center flex items-center justify-center flex-shrink-0">
+                    <span class="md:hidden">1</span>
+                    <span class="hidden md:inline">Real-Time Data Bootcamp</span>
                 </button>
+                <div class="h-0.5 w-8 bg-gray-200 md:hidden flex-shrink-0 rounded-full"></div>
                 <button onclick="switchTab('advanced')" id="tab-advanced"
-                    class="px-6 py-2.5 rounded-xl md:rounded-full text-sm font-semibold text-gray-600 hover:text-gray-900 transition-all duration-300 text-center">
-                    Data Platform & GenAI Immersion
+                    class="w-10 h-10 md:w-auto md:h-auto md:px-6 md:py-2.5 rounded-full text-lg md:text-sm font-bold md:font-semibold text-gray-600 hover:text-gray-900 transition-all duration-300 text-center flex items-center justify-center flex-shrink-0">
+                    <span class="md:hidden">2</span>
+                    <span class="hidden md:inline">Data Platform & GenAI Immersion</span>
                 </button>
+                <div class="h-0.5 w-8 bg-gray-200 md:hidden flex-shrink-0 rounded-full"></div>
                 <button onclick="switchTab('distributed')" id="tab-distributed"
-                    class="px-6 py-2.5 rounded-xl md:rounded-full text-sm font-semibold text-gray-600 hover:text-gray-900 transition-all duration-300 text-center">
-                    Distributed Systems & Database Internals
+                    class="w-10 h-10 md:w-auto md:h-auto md:px-6 md:py-2.5 rounded-full text-lg md:text-sm font-bold md:font-semibold text-gray-600 hover:text-gray-900 transition-all duration-300 text-center flex items-center justify-center flex-shrink-0">
+                    <span class="md:hidden">3</span>
+                    <span class="hidden md:inline">Distributed Systems & Database Internals</span>
                 </button>
             </div>
         </div>
