@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masterclass: Apache Kafka, Spark & Flink | Data + AI Academy</title>
+    <title>Masterclass on Data Engineering for Real-time Applications | Data + AI Academy</title>
     <meta name="description"
-        content="Join Avinash Upadhyaya and Pavan Keshavamurthy for an intermediate-to-advanced masterclass series on Apache Kafka, Spark and Flink. Free, in-person, across May–July weekends in Bengaluru.">
+        content="Join Pavan Keshavamurthy and Avinash Upadhyaya for an intermediate-to-advanced masterclass on Data Engineering for Real-time Applications featuring Kafka, Spark, Flink, and Iceberg. Free, in-person in Bengaluru.">
 
     <!-- SEO & Social Media -->
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Masterclass: Apache Kafka, Spark & Flink | Data + AI Academy">
+    <meta property="og:title" content="Masterclass on Data Engineering for Real-time Applications | Data + AI Academy">
     <meta property="og:description"
-        content="Intermediate → Advanced masterclass on Kafka, Spark & Flink. Free, in-person at 43 Workspace & Events, Bengaluru. Register your interest now.">
-    <meta property="og:image" content="https://dataplusai.academy/img/Data+AI.png">
+        content="Intermediate → Advanced masterclass on Kafka, Spark, Flink & Iceberg. Free, in-person at 43 Workspace & Events, Bengaluru.">
+    <meta property="og:image" content="https://dataplusai.academy/img/workshop.jpeg">
     <meta property="og:url" content="https://dataplusai.academy/masterclass-kafka-spark-flink.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Data + AI Academy">
@@ -30,6 +30,11 @@
     <meta name="apple-mobile-web-app-title" content="Data+AI Academy" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body class="font-['Inter',sans-serif] bg-[#FCFCF9] text-[#1A1A1A] leading-[1.6] antialiased">
@@ -78,20 +83,26 @@
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-[1.1]">
-                Masterclass:<br>
-                <span class="text-green-400">Apache Kafka,<br class="hidden sm:block"> Spark & Flink</span>
+                Masterclass on Data Engineering for<br>
+                <span class="text-green-400">Real-time Applications</span>
             </h1>
-
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-                A hands-on workshop series for those serious about data engineering and streaming — from internals to
-                production.
+            <p class="text-green-400 text-sm md:text-lg font-semibold mb-8 tracking-wider">
+                Apache Kafka · Apache Spark · Apache Flink · Apache Iceberg
             </p>
 
-            <a href="https://forms.gle/spc85vLJNYFhJVx6A" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base md:text-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-xl shadow-green-600/30">
-                Register Your Interest
-                <i class="fas fa-arrow-right"></i>
-            </a>
+
+
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <a href="https://forms.gle/spc85vLJNYFhJVx6A" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base md:text-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-xl shadow-green-600/30">
+                    Register Your Interest
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#learning-objectives"
+                    class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white font-bold text-base md:text-lg hover:bg-white/20 transition-all duration-300">
+                    Learn More
+                </a>
+            </div>
         </div>
     </header>
 
@@ -103,14 +114,14 @@
                     <i class="fas fa-calendar-alt text-green-600"></i>
                 </div>
                 <span class="text-xs text-gray-500 uppercase tracking-wider font-medium">Dates</span>
-                <span class="text-sm font-semibold text-gray-800">May 16, 23 · Jun 6, 13</span>
+                <span class="text-sm font-semibold text-gray-800">16 May, 23 May · 6 Jun, 13 Jun</span>
             </div>
             <div class="flex flex-col items-center gap-2">
                 <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
                     <i class="fas fa-clock text-green-600"></i>
                 </div>
                 <span class="text-xs text-gray-500 uppercase tracking-wider font-medium">Schedule</span>
-                <span class="text-sm font-semibold text-gray-800">May, Jun & Jul Weekends</span>
+                <span class="text-sm font-semibold text-gray-800">Weekend Evenings, 5-7 pm</span>
             </div>
             <div class="flex flex-col items-center gap-2">
                 <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
@@ -137,89 +148,181 @@
                 <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
                     <i class="fas fa-info"></i>
                 </span>
-                <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">About this Masterclass</span>
+                <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">About this Series</span>
             </div>
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-6">
                 Real-world streaming,<br>taught by practitioners.
             </h2>
             <p class="text-gray-600 text-lg leading-relaxed max-w-3xl">
-                Avinash Upadhyaya and Pavan Keshavamurthy are kicking off a series of masterclass-style
-                workshops on <strong>Apache Kafka, Spark and Flink</strong> as part of Data+AI Academy. This is
-                an <strong>intermediate to advanced</strong> track — built for those who want to go beyond
+                Apache Kafka, Spark, Flink, Iceberg are the state of the art technologies for data engineering.
+                This series focuses on how to use them to build real-time, data-intensive applications.
+                This is an <strong>intermediate to advanced</strong> track — built for those who want to go beyond
                 tutorials and truly understand data engineering and streaming at depth.
             </p>
         </section>
 
-        <!-- What we'll cover -->
+        <!-- What you will learn -->
+        <section id="learning-objectives">
+            <div class="inline-flex items-center gap-2 bg-[#f4fce3] px-3 py-1.5 rounded-full mb-6">
+                <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
+                    <i class="fas fa-graduation-cap"></i>
+                </span>
+                <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Learning Objectives</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-10">What you will learn</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                        <i class="fas fa-brain text-green-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Data Infrastructure Theory</h3>
+                        <p class="text-gray-600">Essential elements of data infrastructure theory and the reasoning
+                            behind architectural decisions.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                        <i class="fas fa-code-branch text-green-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Streaming Pipelines</h3>
+                        <p class="text-gray-600">Hands-on end-to-end streaming data pipelines that participants follow
+                            along in real time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who This Is For & What to Bring -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <!-- Left Side: Audience -->
+            <div>
+                <div class="inline-flex items-center gap-2 bg-[#f4fce3] px-3 py-1.5 rounded-full mb-6">
+                    <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Target Audience</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 tracking-tight">Is this for you?</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <i class="fas fa-circle-check text-green-600 text-2xl mt-1 shrink-0"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1 text-lg">Engineering Background</h4>
+                            <p class="text-gray-600 leading-relaxed">Built for Data, Platform, or SRE engineers working with distributed systems.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <i class="fas fa-circle-check text-green-600 text-2xl mt-1 shrink-0"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1 text-lg">Advanced Learning</h4>
+                            <p class="text-gray-600 leading-relaxed">Ready to move past basic tutorials into system internals and core architecture.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <i class="fas fa-circle-check text-green-600 text-2xl mt-1 shrink-0"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1 text-lg">Scale Mindset</h4>
+                            <p class="text-gray-600 leading-relaxed">Interested in building production-grade streaming infrastructure at scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Preparation -->
+            <div class="bg-green-50 rounded-[2.5rem] p-8 md:p-12 border border-green-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white/50 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-full mb-6 shadow-sm">
+                        <i class="fas fa-clipboard-check text-green-600 text-xs"></i>
+                        <span class="text-[0.7rem] font-bold text-green-700 uppercase tracking-widest">Preparation</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 tracking-tight">What to bring</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                                <i class="fas fa-laptop text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1 text-lg">Your Laptop</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">Fully charged with <strong>docker-compose</strong> installed and ready for hands-on labs.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                                <i class="fas fa-fire text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1 text-lg">Enthusiasm</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">A builder's mindset to follow along, experiment, and explore system internals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Topics -->
+        <!-- Topics -->
         <section>
             <div class="inline-flex items-center gap-2 bg-[#f4fce3] px-3 py-1.5 rounded-full mb-6">
                 <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
-                    <i class="fas fa-list-check"></i>
+                    <i class="fas fa-list-ul"></i>
                 </span>
                 <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Curriculum</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-10">What we'll cover</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-10">Topics</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <!-- Card 1 -->
+            <!-- Technology Logos Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
                 <div
-                    class="group bg-white rounded-2xl border border-gray-100 hover:border-green-100 hover:shadow-lg hover:shadow-green-50 transition-all duration-300 p-7">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-green-50 group-hover:bg-green-600 flex items-center justify-center mb-5 transition-colors duration-300">
-                        <i
-                            class="fas fa-database text-green-600 group-hover:text-white transition-colors duration-300"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Essential Data Infra Theory</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        Data(bases) and The Log — the internals of <em>why</em> things work the way they do.
-                        Build the mental models that separate engineers who operate systems from those who understand
-                        them.
-                    </p>
+                    class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 flex flex-col items-center gap-4 group hover:bg-blue-50 transition-colors">
+                    <img src="img/kafkaa.jpg" alt="Kafka" class="h-10 object-contain mix-blend-multiply">
+                    <span class="text-[0.7rem] font-bold text-blue-700 uppercase tracking-widest">Apache Kafka</span>
                 </div>
-
-                <!-- Card 2 -->
                 <div
-                    class="group bg-white rounded-2xl border border-gray-100 hover:border-green-100 hover:shadow-lg hover:shadow-green-50 transition-all duration-300 p-7">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-green-50 group-hover:bg-green-600 flex items-center justify-center mb-5 transition-colors duration-300">
-                        <i
-                            class="fas fa-stream text-green-600 group-hover:text-white transition-colors duration-300"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Deep-Dive into Data Processing</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        From Producers and Consumers all the way up to full data processing frameworks. Kafka
-                        internals, Spark execution model, Flink stateful streaming — covered properly.
-                    </p>
+                    class="bg-green-50/50 p-6 rounded-2xl border border-green-100 flex flex-col items-center gap-4 group hover:bg-green-50 transition-colors">
+                    <img src="img/spark.png" alt="Spark" class="h-10 object-contain mix-blend-multiply">
+                    <span class="text-[0.7rem] font-bold text-green-700 uppercase tracking-widest">Apache Spark</span>
                 </div>
-
-                <!-- Card 3 -->
                 <div
-                    class="group bg-white rounded-2xl border border-gray-100 hover:border-green-100 hover:shadow-lg hover:shadow-green-50 transition-all duration-300 p-7">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-green-50 group-hover:bg-green-600 flex items-center justify-center mb-5 transition-colors duration-300">
-                        <i
-                            class="fas fa-laptop-code text-green-600 group-hover:text-white transition-colors duration-300"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Practical Use-Cases & Hands-on Labs</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        Industry use-cases across all three frameworks with follow-along labs. You'll leave
-                        having actually built things, not just watched slides.
-                    </p>
+                    class="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 flex flex-col items-center gap-4 group hover:bg-purple-50 transition-colors">
+                    <img src="img/flink.jpg" alt="Flink" class="h-10 object-contain mix-blend-multiply">
+                    <span class="text-[0.7rem] font-bold text-purple-700 uppercase tracking-widest">Apache Flink</span>
                 </div>
-
-                <!-- Card 4 -->
                 <div
-                    class="group bg-white rounded-2xl border border-gray-100 hover:border-green-100 hover:shadow-lg hover:shadow-green-50 transition-all duration-300 p-7">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-green-50 group-hover:bg-green-600 flex items-center justify-center mb-5 transition-colors duration-300">
-                        <i
-                            class="fas fa-certificate text-green-600 group-hover:text-white transition-colors duration-300"></i>
+                    class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100 flex flex-col items-center gap-4 group hover:bg-indigo-50 transition-colors">
+                    <img src="img/iceberg.png" alt="Iceberg" class="h-10 object-contain mix-blend-multiply">
+                    <span class="text-[0.7rem] font-bold text-indigo-700 uppercase tracking-widest">Apache Iceberg</span>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex gap-5">
+                    <i class="fas fa-circle-check text-green-600 text-2xl mt-1 shrink-0"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-1 text-lg">System Internals</h4>
+                        <p class="text-gray-600 leading-relaxed">Theory grounded in system internals - the reasoning behind
+                            architectural decisions.</p>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Certification Guidance</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        For those who want it — structured guidance towards <strong>Confluent</strong> and
-                        <strong>Databricks</strong> certifications to formalise what you learn.
-                    </p>
+                </div>
+                <div class="flex gap-5">
+                    <i class="fas fa-circle-check text-green-600 text-2xl mt-1 shrink-0"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-1 text-lg">Hands-on Labs</h4>
+                        <p class="text-gray-600 leading-relaxed">Follow-along labs in real time to build end-to-end data
+                            pipelines.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5">
+                    <i class="fas fa-circle-check text-green-600 text-2xl mt-1 shrink-0"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-1 text-lg">Industry Use-cases</h4>
+                        <p class="text-gray-600 leading-relaxed">Real-world scenarios from fintech, logistics,
+                            e-commerce, and analytics.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -234,30 +337,36 @@
             </div>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-10">Who's teaching</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-                <!-- Avinash -->
-                <div
-                    class="group relative bg-[#f0fdf4] rounded-2xl md:rounded-[2rem] overflow-hidden border border-transparent hover:border-green-100 transition-all duration-300">
-                    <div class="aspect-[4/5] w-full overflow-hidden">
-                        <img src="img/au.png" alt="Avinash Upadhyaya"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pavan -->
+                <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl border border-gray-100">
+                    <div class="w-32 h-32 rounded-2xl overflow-hidden shrink-0 bg-gray-100 mx-auto md:mx-0">
+                        <img src="img/pk.jpeg" alt="Pavan Keshavamurthy" class="w-full h-full object-cover object-top">
                     </div>
-                    <div class="p-3 md:p-6 text-center md:text-left">
-                        <h3 class="text-[0.95rem] md:text-xl font-bold text-gray-900 leading-tight mb-1">Avinash
-                            Upadhyaya</h3>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Pavan Keshavamurthy</h3>
+                        <p class="text-sm text-green-600 font-medium mb-3">Co-founder & CTO, Platformatory</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            15+ years of experience in product and platform engineering, technology architecture, and
+                            building large-scale distributed systems.
+                            He works across Apache Kafka, Apache Flink, Kong, and cloud-native infrastructure.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Pavan -->
-                <div
-                    class="group relative bg-[#f0fdf4] rounded-2xl md:rounded-[2rem] overflow-hidden border border-transparent hover:border-green-100 transition-all duration-300">
-                    <div class="aspect-[4/5] w-full overflow-hidden">
-                        <img src="img/pk.jpeg" alt="Pavan Keshavamurthy"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105">
+                <!-- Avinash -->
+                <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl border border-gray-100">
+                    <div class="w-36 h-32 rounded-2xl overflow-hidden shrink-0 bg-green-50 mx-auto md:mx-0">
+                        <img src="img/au.png" alt="Avinash Upadhyaya" class="w-full h-full object-contain">
                     </div>
-                    <div class="p-3 md:p-6 text-center md:text-left">
-                        <h3 class="text-[0.95rem] md:text-xl font-bold text-gray-900 leading-tight mb-1">Pavan
-                            Keshavamurthy</h3>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Avinash Upadhyaya K R</h3>
+                        <p class="text-sm text-green-600 font-medium mb-3">Platform Engineer, Platformatory</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            Avinash specialises in platform engineering with a focus on Apache Kafka, Kubernetes, and
+                            Kong.
+                            Multi-cloud certified across Azure, Google Cloud, Linux Foundation, and Kong.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -279,34 +388,34 @@
                     class="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:border-green-200 hover:shadow-md transition-all duration-300">
                     <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-2">May</p>
                     <p class="text-4xl font-bold text-green-600 mb-1">16</p>
-                    <p class="text-sm text-gray-500">Saturday</p>
+                    <p class="text-sm text-gray-500">(5-7 pm)</p>
                 </div>
                 <!-- Date 2 -->
                 <div
                     class="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:border-green-200 hover:shadow-md transition-all duration-300">
                     <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-2">May</p>
                     <p class="text-4xl font-bold text-green-600 mb-1">23</p>
-                    <p class="text-sm text-gray-500">Saturday</p>
+                    <p class="text-sm text-gray-500">(5-7 pm)</p>
                 </div>
                 <!-- Date 3 -->
                 <div
                     class="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:border-green-200 hover:shadow-md transition-all duration-300">
                     <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-2">June</p>
-                    <p class="text-4xl font-bold text-green-600 mb-1">6</p>
-                    <p class="text-sm text-gray-500">Saturday</p>
+                    <p class="text-4xl font-bold text-green-600 mb-1">06</p>
+                    <p class="text-sm text-gray-500">(5-7 pm)</p>
                 </div>
                 <!-- Date 4 -->
                 <div
                     class="bg-white rounded-2xl border border-gray-100 p-6 text-center hover:border-green-200 hover:shadow-md transition-all duration-300">
                     <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-2">June</p>
                     <p class="text-4xl font-bold text-green-600 mb-1">13</p>
-                    <p class="text-sm text-gray-500">Saturday</p>
+                    <p class="text-sm text-gray-500">(5-7 pm)</p>
                 </div>
             </div>
 
             <p class="mt-5 text-sm text-gray-500 flex items-center gap-2">
                 <i class="fas fa-info-circle text-green-600"></i>
-                Series continues across May, June and July weekends. More dates will be announced.
+                Series continues across May and June. Weekend evenings, 5-7 pm. Free to attend.
             </p>
         </section>
 
@@ -319,14 +428,14 @@
                             class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
                             <i class="fas fa-map-marker-alt"></i>
                         </span>
-                        <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Venue</span>
+                        <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Venue & Contact</span>
                     </div>
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">43 Workspace &amp; Events</h2>
                     <p class="text-gray-500 leading-relaxed mb-6">
                         In-person sessions at one of Bengaluru's great collaborative spaces. Come ready to learn,
                         build, and meet others in the community.
                     </p>
-                    <div class="flex flex-wrap gap-3">
+                    <div class="flex flex-wrap gap-3 mb-8">
                         <span
                             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-semibold">
                             <i class="fas fa-users text-[0.65rem]"></i> In-Person
@@ -339,6 +448,23 @@
                             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-semibold">
                             <i class="fas fa-ticket-alt text-[0.65rem]"></i> Free Entry
                         </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <i class="fas fa-phone text-green-600 w-5"></i>
+                            <a href="tel:+917411527327" class="hover:text-green-600 font-medium">+91 7411527327</a>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <i class="fas fa-envelope text-green-600 w-5"></i>
+                            <a href="mailto:enroll@dataplusai.academy"
+                                class="hover:text-green-600 font-medium">enroll@dataplusai.academy</a>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-600">
+                            <i class="fas fa-location-dot text-green-600 w-5"></i>
+                            <a href="https://share.google/0jnmqoB5sUGw5cIF6" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-green-600 font-medium">View on Google Maps</a>
+                        </div>
                     </div>
                 </div>
                 <div class="w-full md:w-48 h-48 bg-green-50 rounded-2xl flex items-center justify-center flex-shrink-0">
