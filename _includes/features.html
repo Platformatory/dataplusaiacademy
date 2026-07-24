@@ -18,26 +18,41 @@
         <div class="flex flex-col gap-3">
 
             <!-- Items -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
+            <!-- Flexbox (not grid) so the trailing row of 2 centers itself instead of trailing left with a gap -->
+            <div class="flex flex-wrap justify-center gap-3 md:gap-6">
                 <div
-                    class="bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
+                    class="w-full md:w-[calc(33.333%-16px)] bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Learn by Doing</h3>
                     <p class="text-gray-700 text-[0.95rem] leading-relaxed">You build real pipelines and platforms,
                         hands-on — not watch pre-recorded videos.</p>
                 </div>
 
                 <div
-                    class="bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
+                    class="w-full md:w-[calc(33.333%-16px)] bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Learn from Do-ers</h3>
                     <p class="text-gray-700 text-[0.95rem] leading-relaxed">Every session is taught by practitioners
                         actively building and operating these systems — not instructors reading slides.</p>
                 </div>
 
                 <div
-                    class="bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
+                    class="w-full md:w-[calc(33.333%-16px)] bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Learn by Sparring</h3>
                     <p class="text-gray-700 text-[0.95rem] leading-relaxed">Reinforcement, not repetition — you drill
                         concepts through hands-on practice and direct feedback from your mentors.</p>
+                </div>
+
+                <div
+                    class="w-full md:w-[calc(33.333%-16px)] bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Learn by First Principles</h3>
+                    <p class="text-gray-700 text-[0.95rem] leading-relaxed">The computing fundamentals of data and
+                        AI, so tools change and you still know what to do.</p>
+                </div>
+
+                <div
+                    class="w-full md:w-[calc(33.333%-16px)] bg-gray-50 hover:bg-gray-100 transition-colors duration-200 p-6 rounded-lg border border-transparent cursor-pointer">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Learn to Teach</h3>
+                    <p class="text-gray-700 text-[0.95rem] leading-relaxed">The highest form of learning. Alumni who
+                        can explain, mentor, and multiply the craft.</p>
                 </div>
             </div>
 
