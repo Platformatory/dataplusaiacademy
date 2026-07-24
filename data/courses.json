@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bootcamp",
+    "name": "Real-Time Data Bootcamp",
+    "duration_label": "3 Months (In-person)",
+    "delivery_label": "Mon, Wed, Thu (9:30am to 1pm)",
+    "price_label": "₹36,000 · Limited seats",
+    "payment_link": "https://payments.zoho.com/l/PLACEHOLDER-bootcamp",
+    "curriculum_link": "https://drive.google.com/PLACEHOLDER-bootcamp-curriculum"
+  },
+  {
+    "id": "advanced",
+    "name": "Data x Agentic AI Immersion",
+    "duration_label": "3 Months (Weekends)",
+    "delivery_label": "Live Online on Weekends (3 hours) + Open office hours",
+    "price_label": "₹36,000 · Limited seats",
+    "payment_link": "https://payments.zoho.com/l/PLACEHOLDER-genai-immersion",
+    "curriculum_link": "https://drive.google.com/PLACEHOLDER-genai-immersion-curriculum"
+  },
+  {
+    "id": "distributed",
+    "name": "Distributed Systems & Database Internals",
+    "duration_label": "6 months, Part-time",
+    "delivery_label": "Live Online on Weekends (3 hours)",
+    "price_label": "₹1,20,000 · Limited seats",
+    "payment_link": "https://payments.zoho.com/l/PLACEHOLDER-distributed-systems",
+    "curriculum_link": "https://drive.google.com/PLACEHOLDER-distributed-systems-curriculum"
+  },
+  {
+    "id": "platform",
+    "name": "Platform Engineering Bootcamp",
+    "duration_label": "3 Months",
+    "delivery_label": "Cohort-based, hybrid sessions",
+    "price_label": "₹36,000 · Limited seats",
+    "payment_link": "https://payments.zoho.com/l/PLACEHOLDER-platform-engineering",
+    "curriculum_link": "https://drive.google.com/PLACEHOLDER-platform-engineering-curriculum"
+  }
+]

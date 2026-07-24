@@ -1,0 +1,57 @@
+---
+layout: page
+title: Events | Data + AI Academy
+description: >-
+  Upcoming and past masterclasses, workshops, and community events from Data + AI Academy.
+robots: index, follow
+---
+
+<section class="py-14 md:py-20">
+    <div class="max-w-[1000px] mx-auto px-4 md:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 bg-[#f4fce3] px-3 py-1.5 rounded-full mb-4">
+                <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
+                    <i class="fas fa-calendar-check"></i>
+                </span>
+                <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Community</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4">
+                Events
+            </h1>
+            <p class="text-gray-600 text-lg max-w-xl mx-auto leading-relaxed">
+                Free masterclasses and workshops led by practitioners. Follow along or catch the next one live.
+            </p>
+            <a href="https://luma.com/data-ai-academy" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 mt-4 text-sm text-green-700 font-semibold hover:underline">
+                <i class="fas fa-calendar-plus"></i> Follow us on Luma for new events
+            </a>
+        </div>
+
+        <!-- Empty state (shown only if the fetch fails or there are truly no events) -->
+        <div id="events-empty" class="hidden text-center text-gray-500 py-12">
+            No events to show right now — check back soon.
+        </div>
+
+        <!-- Upcoming -->
+        <div data-section="upcoming" class="mb-14">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Upcoming</h2>
+            <div id="upcoming-events" class="space-y-4">
+                <!-- Populated by initEventsListing() in js/events.js -->
+            </div>
+        </div>
+
+        <!-- Past -->
+        <div data-section="past">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Past Events</h2>
+            <div id="past-events" class="space-y-4">
+                <!-- Populated by initEventsListing() in js/events.js -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{{ '/js/events.js' | relative_url }}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", initEventsListing);
+</script>

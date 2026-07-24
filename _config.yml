@@ -1,0 +1,46 @@
+title: Data + AI Academy
+description: >-
+  Data Engineering and AI Platform Engineering with our immersive,
+  practitioner-led bootcamp. Build real-world pipelines with Kafka, Flink, and Airflow.
+url: "https://dataplusai.academy"
+baseurl: ""
+
+markdown: kramdown
+# No global `permalink` override: pages keep their default output path (foo.html -> /foo.html),
+# matching every URL this site already has indexed/bookmarked. index.html maps to "/" for free.
+
+plugins:
+  - jekyll-sitemap
+
+# Events are a real Jekyll collection — each _events/*.md is one event. Individual event
+# detail pages (e.g. masterclass-kafka-spark-flink.html) stay as their own hand-authored
+# pages; a collection entry just points at one via its `url` front matter and feeds the
+# /events.html listing page plus the generated events.json (see that file's comment).
+collections:
+  events:
+    output: false
+
+# Directories Jekyll should leave completely untouched (served as plain static files).
+# js/*.js is fetched client-side at runtime by the collection helpers (js/events.js,
+# js/courses.js) — it must pass through byte-for-byte, unprocessed. data/courses.json is
+# still hand-maintained (courses aren't a collection yet); data/events.json no longer
+# exists — events.json at the site root is generated from the _events collection instead.
+keep_files:
+  - data
+  - js
+  - img
+  - favicon
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

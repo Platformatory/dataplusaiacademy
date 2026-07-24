@@ -1,0 +1,357 @@
+<section class="py-14 border-b border-[#E0E0E0] bg-[#FAFAFA]" id="courses">
+    <div class="max-w-[1300px] mx-auto px-8">
+        <span class="text-green-600 uppercase font-bold text-[0.8rem] tracking-[1px] mb-8 block text-center">Data+AI
+            Academy Courses</span>
+
+        <!-- Compare-at-a-glance table (facts sourced from data/courses.json via js/courses.js) -->
+        <p class="md:hidden text-center text-xs text-gray-500 mb-2">
+            <i class="fas fa-arrows-left-right"></i> Swipe to compare — course names stay pinned
+        </p>
+        <div class="overflow-x-auto pb-4 custom-scrollbar">
+            <table class="w-full min-w-[1080px] border-collapse bg-white rounded-2xl shadow-lg overflow-hidden">
+                <thead>
+                    <tr class="bg-[#050505]">
+                        <th class="sticky left-0 z-20 text-left p-4 md:p-6 text-white font-bold text-sm md:text-base border-r border-gray-700 bg-[#050505] w-1/5">
+                            Compare
+                        </th>
+                        <th class="align-top text-left p-4 md:p-6 text-[#4ade80] font-bold text-sm md:text-base border-r border-green-900 bg-green-950 w-1/5">
+                            <div class="mb-2">Real-Time Data Bootcamp</div>
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
+                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-green-200">
+                                    <i class="fas fa-calendar text-[0.6rem]"></i>
+                                    <span data-course="bootcamp" data-field="upcoming-batch">—</span>
+                                </span>
+                                <a data-course="bootcamp" data-field="curriculum-link" href="#" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 text-[0.7rem] text-green-300 hover:text-white hover:underline">
+                                    <i class="fas fa-download text-[0.6rem]"></i> Curriculum
+                                </a>
+                            </div>
+                        </th>
+                        <th class="align-top text-left p-4 md:p-6 text-gray-200 font-bold text-sm md:text-base border-r border-gray-700 w-1/5">
+                            <div class="mb-2">Data x Agentic AI Immersion</div>
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
+                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-gray-400">
+                                    <i class="fas fa-calendar text-[0.6rem]"></i>
+                                    <span data-course="advanced" data-field="upcoming-batch">—</span>
+                                </span>
+                                <a data-course="advanced" data-field="curriculum-link" href="#" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
+                                    <i class="fas fa-download text-[0.6rem]"></i> Curriculum
+                                </a>
+                            </div>
+                        </th>
+                        <th class="align-top text-left p-4 md:p-6 text-gray-200 font-bold text-sm md:text-base border-r border-gray-700 w-1/5">
+                            <div class="mb-2">Platform Engineering Bootcamp</div>
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
+                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-gray-400">
+                                    <i class="fas fa-calendar text-[0.6rem]"></i>
+                                    <span data-course="platform" data-field="upcoming-batch">—</span>
+                                </span>
+                                <a data-course="platform" data-field="curriculum-link" href="#" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
+                                    <i class="fas fa-download text-[0.6rem]"></i> Curriculum
+                                </a>
+                            </div>
+                        </th>
+                        <th class="align-top text-left p-4 md:p-6 text-gray-200 font-bold text-sm md:text-base w-1/5">
+                            <div class="mb-2">Distributed Systems & DB Internals</div>
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
+                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-gray-400">
+                                    <i class="fas fa-calendar text-[0.6rem]"></i>
+                                    <span data-course="distributed" data-field="upcoming-batch">—</span>
+                                </span>
+                                <a data-course="distributed" data-field="curriculum-link" href="#" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
+                                    <i class="fas fa-download text-[0.6rem]"></i> Curriculum
+                                </a>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Duration</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700"
+                            data-course="bootcamp" data-field="duration">—</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="advanced"
+                            data-field="duration">—</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="platform"
+                            data-field="duration">—</td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700" data-course="distributed"
+                            data-field="duration">—</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Delivery</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700"
+                            data-course="bootcamp" data-field="delivery">—</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="advanced"
+                            data-field="delivery">—</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="platform"
+                            data-field="delivery">—</td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700" data-course="distributed"
+                            data-field="delivery">—</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Program Fee</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm">
+                            <p class="font-semibold text-gray-900 mb-2" data-course="bootcamp" data-field="price">—</p>
+                            <a data-course="bootcamp" data-field="payment-link" href="#" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#854D0E] hover:underline">
+                                <i class="fas fa-lock text-[0.65rem]"></i> Pay Now
+                            </a>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm">
+                            <p class="font-semibold text-gray-900 mb-2" data-course="advanced" data-field="price">—</p>
+                            <a data-course="advanced" data-field="payment-link" href="#" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#854D0E] hover:underline">
+                                <i class="fas fa-lock text-[0.65rem]"></i> Pay Now
+                            </a>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm">
+                            <p class="font-semibold text-gray-900 mb-2" data-course="platform" data-field="price">—</p>
+                            <a data-course="platform" data-field="payment-link" href="#" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#854D0E] hover:underline">
+                                <i class="fas fa-lock text-[0.65rem]"></i> Pay Now
+                            </a>
+                        </td>
+                        <td class="p-4 md:p-6 text-sm">
+                            <p class="font-semibold text-gray-900 mb-2" data-course="distributed" data-field="price">—
+                            </p>
+                            <a data-course="distributed" data-field="payment-link" href="#" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#854D0E] hover:underline">
+                                <i class="fas fa-lock text-[0.65rem]"></i> Pay Now
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Format</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700">Hybrid —
+                            Weekdays, In-Person</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">Hybrid — Weekends +
+                            Office Hours</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">Hybrid — Weekdays,
+                            In-Person</td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700">Hybrid — Weekends</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Cohort
+                            Size</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700">12-18
+                            students</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">12-18 students</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">12-18 students</td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700">Only 6 students</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Scholarship</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-green-600 mr-1"></i>Yes, contact us
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-green-600 mr-1"></i>Yes, contact us
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-green-600 mr-1"></i>Yes, contact us
+                        </td>
+                        <td class="p-4 md:p-6 text-sm text-gray-500">
+                            <i class="fas fa-times-circle text-gray-400 mr-1"></i>Not offered
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Certificate</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-green-600 mr-1"></i>Yes
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-green-600 mr-1"></i>Yes
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-green-600 mr-1"></i>Yes
+                        </td>
+                        <td class="p-4 md:p-6 text-sm text-gray-500">
+                            <i class="fas fa-times-circle text-gray-400 mr-1"></i>No
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm align-top">Audience
+                            Fit</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Career transition route</li>
+                                <li>Prior customer-facing/professional experience preferred</li>
+                                <li>Moving into data engineering</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Career transition route</li>
+                                <li>Prior customer-facing/professional experience preferred</li>
+                                <li>Moving into data & agentic AI engineering</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>DevOps/SRE engineers seeking a career lift</li>
+                                <li>Fresh grads with active interest in infra systems</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Already working in backend/infrastructure roles</li>
+                                <li>Going deeper into systems internals</li>
+                                <li>Not a career-transition track</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm align-top">Pre-requisites</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>SQL & database concepts</li>
+                                <li>Programming (Python / Java / Scala) preferred</li>
+                                <li>Exposure to enterprise data domains or ETL technologies is a big plus</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>SQL & database concepts</li>
+                                <li>Programming (Python / Java / Scala) preferred</li>
+                                <li>Exposure to enterprise data domains or ETL technologies is a big plus</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Basic Linux, networking & container fundamentals</li>
+                                <li>DevOps/SRE experience a plus, not required</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Senior-level backend/infrastructure experience</li>
+                                <li>Strong CS fundamentals (data structures, networking, OS basics)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm align-top">Success
+                            Criteria</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Earn the CCDAK certification</li>
+                                <li>Write real-time stream processing pipelines</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Earn a Databricks certification</li>
+                                <li>Proficiency with table formats</li>
+                                <li>Ingest/process data in the lakehouse with PySpark/SQL</li>
+                                <li>Build agents grounded in golden data products</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Earn a CKA/CKAD/CKS certification</li>
+                                <li>Golang proficiency; build K8s operators from scratch</li>
+                                <li>Deep-dive on the L4-L7 proxy/gateway plane</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Contribute meaningfully to large infrastructure projects</li>
+                                <li>Sound sense of low-level programming, OS, databases</li>
+                                <li>Practical algorithms & strategies</li>
+                                <li>Intuition for high-performance systems</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm align-top">Employment
+                            Pathway</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Fast-track into Platformatory</li>
+                                <li>Startups</li>
+                                <li>India GCCs</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Fast-track into Platformatory</li>
+                                <li>Startups</li>
+                                <li>India GCCs</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Fast-track into Platformatory</li>
+                                <li>DevOps/Platform roles at high-growth companies</li>
+                            </ul>
+                        </td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700 align-top">
+                            <ul class="space-y-1 list-disc list-inside marker:text-green-600">
+                                <li>Fast-track into Platformatory</li>
+                                <li>FAANG and top infrastructure teams</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Effort
+                            Required</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700">~5–6
+                            hrs/day (in-class + assignments), 3 days/week</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">~2–3 hrs/day average
+                            (weekday prep + weekend live sessions)</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700">~4–5 hrs/day across the
+                            cohort schedule</td>
+                        <td class="p-4 md:p-6 text-sm text-gray-700">~2–3 hrs/day average (weekday prep + weekend live
+                            sessions)</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Effort
+                            Gradient</td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm font-semibold text-gray-900">High</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm font-semibold text-gray-900">Moderate</td>
+                        <td class="p-4 md:p-6 border-r border-gray-200 text-sm font-semibold text-gray-900">Moderate</td>
+                        <td class="p-4 md:p-6 text-sm font-semibold text-gray-900">Extra High</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="sticky left-0 z-10 bg-white p-4 md:p-6 border-r border-gray-200"></td>
+                        <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40">
+                            <a href="enroll.html"
+                                class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
+                                I'm Interested <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200">
+                            <a href="enroll.html"
+                                class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
+                                I'm Interested <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </td>
+                        <td class="p-4 md:p-6 border-r border-gray-200">
+                            <a href="enroll.html"
+                                class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
+                                I'm Interested <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </td>
+                        <td class="p-4 md:p-6">
+                            <a href="enroll.html"
+                                class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
+                                I'm Interested <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

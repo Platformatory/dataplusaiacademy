@@ -1,5 +1,12 @@
 # Dependencies
 node_modules/
+vendor/
+.bundle/
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
 
 # Production
 dist/
