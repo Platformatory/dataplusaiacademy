@@ -1,9 +1,10 @@
 <section class="py-14 border-b border-[#E0E0E0] bg-[#FCFCF9]">
     <div class="max-w-[1300px] mx-auto px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <!-- Flexbox (not grid) so the trailing row of 2 centers itself instead of trailing left with a gap -->
+        <div class="flex flex-wrap justify-center gap-6 md:gap-8">
             <!-- Stat 1 -->
             <div
-                class="bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
+                class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
                 <div>
                     <div class="flex items-baseline mb-4">
                         <span class="text-[3.5rem] md:text-[4rem] font-bold text-gray-400 leading-none counter"
@@ -17,7 +18,7 @@
             </div>
             <!-- Stat 2 -->
             <div
-                class="bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
+                class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
                 <div>
                     <div class="flex items-baseline mb-4">
                         <span class="text-[3.5rem] md:text-[4rem] font-bold text-gray-300 leading-none counter"
@@ -31,7 +32,7 @@
             </div>
             <!-- Stat 3 -->
             <div
-                class="bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
+                class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
                 <div>
                     <div class="flex items-baseline mb-4">
                         <span class="text-[3.5rem] md:text-[4rem] font-bold text-gray-300 leading-none counter"
@@ -45,7 +46,7 @@
             </div>
             <!-- Stat 4 -->
             <div
-                class="bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
+                class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
                 <div>
                     <div class="flex items-baseline mb-4">
                         <span class="text-[3.5rem] md:text-[4rem] font-bold text-gray-300 leading-none counter"
@@ -55,6 +56,20 @@
                     <h4 class="text-[1.1rem] font-bold text-[#1A1A1A] mb-3">Average Salary Lift</h4>
                     <p class="text-[0.95rem] text-gray-700 leading-relaxed">Typical salary increase moving from
                         service-based to product-based companies.</p>
+                </div>
+            </div>
+            <!-- Stat 5 -->
+            <div
+                class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] bg-white rounded-[2rem] border border-dashed border-gray-300 p-8 h-full flex flex-col justify-between hover:border-[#16a34a] transition-colors duration-300">
+                <div>
+                    <div class="flex items-baseline mb-4">
+                        <span class="text-[3.5rem] md:text-[4rem] font-bold text-gray-300 leading-none counter"
+                            data-target="100">0</span>
+                        <span class="text-[2.5rem] font-bold text-[#16a34a] leading-none ml-1">%</span>
+                    </div>
+                    <h4 class="text-[1.1rem] font-bold text-[#1A1A1A] mb-3">First-Attempt Certification</h4>
+                    <p class="text-[0.95rem] text-gray-700 leading-relaxed">Of everyone who attended achieved an
+                        industry Data/AI certification on their first attempt.</p>
                 </div>
             </div>
         </div>

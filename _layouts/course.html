@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.name }} | Data + AI Academy</title>
+    <meta name="description" content="{{ page.tagline }}">
+
+    <!-- SEO & Social Media -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ page.name }} | Data + AI Academy">
+    <meta property="og:description" content="{{ page.tagline }}">
+    <meta property="og:image" content="{{ '/img/Data+AI.png' | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="{{ '/favicon/favicon-96x96.png' | relative_url }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon/favicon.svg' | relative_url }}" />
+    <link rel="shortcut icon" href="{{ '/favicon/favicon.ico' | relative_url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicon/apple-touch-icon.png' | relative_url }}" />
+    <meta name="apple-mobile-web-app-title" content="Data+AI Academy" />
+    <link rel="manifest" href="{{ '/favicon/site.webmanifest' | relative_url }}" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="font-['Inter',sans-serif] bg-[#FCFCF9] text-[#1A1A1A] leading-[1.6] antialiased">
+
+    {% include subpage-nav.html %}
+
+    <!-- Hero -->
+    <header class="relative bg-[#050505] text-white py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/img/grid-pattern.svg')] opacity-10"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-green-900/20 to-transparent"></div>
+
+        <div class="relative max-w-4xl mx-auto px-6 text-center">
+            <div class="flex flex-wrap justify-center gap-3 mb-6">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs font-medium text-green-400">
+                    <i class="fas fa-layer-group text-[0.6rem]"></i> {{ page.format_label }}
+                </span>
+                <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs font-medium text-green-400">
+                    <i class="fas fa-tag text-[0.6rem]"></i> {{ page.price_label }}
+                </span>
+            </div>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 tracking-tight leading-[1.1]">{{ page.name }}</h1>
+            <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">{{ page.tagline }}</p>
+            <a href="{{ '/enroll.html' | relative_url }}"
+                class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base md:text-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-xl shadow-green-600/30">
+                Talk to a Coordinator
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Quick details strip -->
+    <section class="bg-white border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                    <i class="fas fa-calendar-alt text-green-600"></i>
+                </div>
+                <span class="text-xs text-gray-500 uppercase tracking-wider font-medium">Duration</span>
+                <span class="text-sm font-semibold text-gray-800">{{ page.duration_label }}</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                    <i class="fas fa-users text-green-600"></i>
+                </div>
+                <span class="text-xs text-gray-500 uppercase tracking-wider font-medium">Cohort Size</span>
+                <span class="text-sm font-semibold text-gray-800">{{ page.cohort_size }}</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                    <i class="fas fa-certificate text-green-600"></i>
+                </div>
+                <span class="text-xs text-gray-500 uppercase tracking-wider font-medium">Certificate</span>
+                <span class="text-sm font-semibold text-gray-800">{{ page.certificate }}</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                    <i class="fas fa-gauge-high text-green-600"></i>
+                </div>
+                <span class="text-xs text-gray-500 uppercase tracking-wider font-medium">Effort</span>
+                <span class="text-sm font-semibold text-gray-800">{{ page.effort_gradient }}</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 md:py-20 space-y-16">
+
+        <!-- Overview -->
+        <section>
+            <div class="inline-flex items-center gap-2 bg-[#f4fce3] px-3 py-1.5 rounded-full mb-6">
+                <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
+                    <i class="fas fa-info"></i>
+                </span>
+                <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Overview</span>
+            </div>
+            <div class="text-gray-600 text-lg leading-relaxed">
+                {{ content }}
+            </div>
+            <div class="mt-6 p-5 bg-[#ECFEFF] rounded-xl border border-[#CFFAFE] inline-block">
+                <p class="text-sm text-gray-700"><strong>Delivery:</strong> {{ page.delivery_label }}</p>
+            </div>
+        </section>
+
+        <!-- Curriculum -->
+        <section id="curriculum">
+            <div class="inline-flex items-center gap-2 bg-[#f4fce3] px-3 py-1.5 rounded-full mb-6">
+                <span class="w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[0.6rem]">
+                    <i class="fas fa-graduation-cap"></i>
+                </span>
+                <span class="text-[0.8rem] font-medium text-gray-800 tracking-wide">Curriculum</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">Module-by-module breakdown</h2>
+            <p class="text-gray-500 mb-10">A tentative outline — exact pacing may adjust per cohort.</p>
+
+            <div class="space-y-6">
+                {% for module in page.modules %}
+                <div class="bg-white p-6 md:p-8 rounded-2xl border border-gray-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                            {{ forloop.index }}
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900">{{ module.title }}</h3>
+                    </div>
+                    <ul class="space-y-2 pl-11">
+                        {% for topic in module.topics %}
+                        <li class="flex gap-3 text-gray-700 text-sm">
+                            <i class="fas fa-check-circle text-green-600 mt-1 flex-shrink-0"></i>
+                            <span>{{ topic }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Who it's for / Pre-requisites -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-green-600">Audience Fit</h3>
+                <ul class="space-y-3">
+                    {% for item in page.audience_fit %}
+                    <li class="flex gap-3">
+                        <i class="fas fa-user-check text-[#16a34a] mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-800">{{ item }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-green-600">Pre-requisites</h3>
+                <ul class="space-y-3">
+                    {% for item in page.prerequisites %}
+                    <li class="flex gap-3">
+                        <i class="fas fa-circle-check text-[#16a34a] mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-800">{{ item }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Success Criteria / Employment Pathway -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="bg-[#F0FDF4] p-6 md:p-8 rounded-2xl border border-[#DCFCE7]">
+                <h3 class="text-lg font-bold mb-4 text-green-600">Success Criteria</h3>
+                <ul class="space-y-3">
+                    {% for item in page.success_criteria %}
+                    <li class="flex gap-3">
+                        <i class="fas fa-star text-[#16a34a] mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-800 text-sm">{{ item }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="bg-[#ECFEFF] p-6 md:p-8 rounded-2xl border border-[#CFFAFE]">
+                <h3 class="text-lg font-bold mb-4 text-[#0E7490]">Employment Pathway</h3>
+                <ul class="space-y-3">
+                    {% for item in page.employment_pathway %}
+                    <li class="flex gap-3">
+                        <i class="fas fa-briefcase text-[#0E7490] mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-800 text-sm">{{ item }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <section class="relative bg-[#050505] rounded-3xl overflow-hidden py-16 px-8 md:px-16 text-center">
+            <div class="absolute inset-0 bg-[url('/img/grid-pattern.svg')] opacity-5"></div>
+            <div class="relative">
+                <p class="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">{{ page.price_label }}</p>
+                <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight mb-5">
+                    Ready to get started?
+                </h2>
+                <p class="text-gray-400 max-w-xl mx-auto mb-10 text-base leading-relaxed">
+                    Talk to a coordinator about seats, scholarships, and the next cohort for {{ page.name }}.
+                </p>
+                <a href="{{ '/enroll.html' | relative_url }}"
+                    class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base md:text-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-xl shadow-green-600/30">
+                    Talk to a Coordinator
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const yearSpan = document.getElementById("current-year");
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+        });
+    </script>
+
+    <!-- WhatsApp Support Button -->
+    <a href="https://wa.me/917411527327" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center w-16 h-16">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+</body>
+
+</html>

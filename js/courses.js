@@ -1,6 +1,7 @@
-// Courses collection helpers (data/courses.json)
-// Populates the compare-at-a-glance table in sections/courses.html so those figures
-// live in one editable file instead of being hand-copied per column.
+// Courses collection helpers. courses.json is generated at build time from the _courses
+// Jekyll collection (see that file's front matter + Liquid loop) — _courses/*.md is the
+// actual source of truth (facts + curriculum, rendered as its own detail page); this fetch
+// just reads the generated snapshot client-side to populate the compare-at-a-glance table.
 
 const COURSE_MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July",
     "August", "September", "October", "November", "December"];
@@ -15,7 +16,7 @@ function nextCohortLabel() {
 
 async function fetchCourses() {
     const timestamp = new Date().getTime();
-    const response = await fetch(`data/courses.json?v=${timestamp}`);
+    const response = await fetch(`courses.json?v=${timestamp}`);
     if (!response.ok) throw new Error("Failed to load courses");
     return response.json();
 }
@@ -40,7 +41,6 @@ async function initCourses() {
             setCompareField("delivery", course.delivery_label);
             setCompareField("upcoming-batch", cohortDate);
             setCompareField("price", course.price_label);
-            setCompareLink("payment-link", course.payment_link);
             setCompareLink("curriculum-link", course.curriculum_link);
         });
     } catch (error) {

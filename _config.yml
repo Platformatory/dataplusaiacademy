@@ -16,17 +16,24 @@ plugins:
 # detail pages (e.g. masterclass-kafka-spark-flink.html) stay as their own hand-authored
 # pages; a collection entry just points at one via its `url` front matter and feeds the
 # /events.html listing page plus the generated events.json (see that file's comment).
+#
+# Courses are also a real collection, but unlike events, Jekyll *does* render a page per
+# course (output: true) — each _courses/*.md is both the data source (front matter facts
+# used by the comparison table via the generated courses.json) and the actual detail page
+# (body content + modules front matter rendered by _layouts/course.html).
 collections:
   events:
     output: false
+  courses:
+    output: true
+    permalink: /courses/:path/
 
 # Directories Jekyll should leave completely untouched (served as plain static files).
 # js/*.js is fetched client-side at runtime by the collection helpers (js/events.js,
-# js/courses.js) — it must pass through byte-for-byte, unprocessed. data/courses.json is
-# still hand-maintained (courses aren't a collection yet); data/events.json no longer
-# exists — events.json at the site root is generated from the _events collection instead.
+# js/courses.js) — it must pass through byte-for-byte, unprocessed. Neither data/events.json
+# nor data/courses.json exist anymore — events.json and courses.json at the site root are
+# generated from the _events / _courses collections instead (see those files' comments).
 keep_files:
-  - data
   - js
   - img
   - favicon

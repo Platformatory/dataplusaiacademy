@@ -1,0 +1,15 @@
+---
+layout: null
+---
+[
+{% for course in site.courses %}
+  {
+    "id": {{ course.course_id | jsonify }},
+    "name": {{ course.name | jsonify }},
+    "duration_label": {{ course.duration_label | jsonify }},
+    "delivery_label": {{ course.delivery_label | jsonify }},
+    "price_label": {{ course.price_label | jsonify }},
+    "curriculum_link": {{ course.url | relative_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
