@@ -2,32 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.name }} | Data + AI Academy</title>
-    <meta name="description" content="{{ page.tagline }}">
-
-    <!-- SEO & Social Media -->
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="{{ page.name }} | Data + AI Academy">
-    <meta property="og:description" content="{{ page.tagline }}">
-    <meta property="og:image" content="{{ '/img/Data+AI.png' | absolute_url }}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" href="{{ '/favicon/favicon-96x96.png' | relative_url }}" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="{{ '/favicon/favicon.svg' | relative_url }}" />
-    <link rel="shortcut icon" href="{{ '/favicon/favicon.ico' | relative_url }}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicon/apple-touch-icon.png' | relative_url }}" />
-    <meta name="apple-mobile-web-app-title" content="Data+AI Academy" />
-    <link rel="manifest" href="{{ '/favicon/site.webmanifest' | relative_url }}" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    {% assign seo_title = page.name | append: " | Data + AI Academy" %}
+    {% include seo-head.html
+        title=seo_title
+        description=page.tagline
+        robots="index, follow"
+    %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": {{ page.name | jsonify }},
+      "description": {{ page.tagline | jsonify }},
+      "provider": {
+        "@type": "Organization",
+        "name": "Data + AI Academy",
+        "url": "{{ site.url }}/"
+      }{% if page.certificate == "Yes" %},
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Blended",
+        "courseWorkload": {{ page.effort_required | jsonify }}
+      }{% endif %}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": {{ page.name | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+      ]
+    }
+    </script>
     <style>
         html {
             scroll-behavior: smooth;

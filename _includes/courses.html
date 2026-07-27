@@ -1,3 +1,7 @@
+{% assign course_bootcamp = site.courses | where: "course_id", "bootcamp" | first %}
+{% assign course_advanced = site.courses | where: "course_id", "advanced" | first %}
+{% assign course_platform = site.courses | where: "course_id", "platform" | first %}
+{% assign course_distributed = site.courses | where: "course_id", "distributed" | first %}
 <section class="py-14 border-b border-[#E0E0E0] bg-[#FAFAFA]" id="courses">
     <div class="max-w-[1300px] mx-auto px-8">
         <span class="text-green-600 uppercase font-bold text-[0.8rem] tracking-[1px] mb-8 block text-center">Data+AI
@@ -22,7 +26,7 @@
                                     <i class="fas fa-calendar text-[0.6rem]"></i>
                                     <span data-course="bootcamp" data-field="upcoming-batch">—</span>
                                 </span>
-                                <a data-course="bootcamp" data-field="curriculum-link" href="#"
+                                <a data-course="bootcamp" data-field="curriculum-link" href="{{ course_bootcamp.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-green-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
                                 </a>
@@ -36,7 +40,7 @@
                                     <i class="fas fa-calendar text-[0.6rem]"></i>
                                     <span data-course="advanced" data-field="upcoming-batch">—</span>
                                 </span>
-                                <a data-course="advanced" data-field="curriculum-link" href="#"
+                                <a data-course="advanced" data-field="curriculum-link" href="{{ course_advanced.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
                                 </a>
@@ -50,7 +54,7 @@
                                     <i class="fas fa-calendar text-[0.6rem]"></i>
                                     <span data-course="platform" data-field="upcoming-batch">—</span>
                                 </span>
-                                <a data-course="platform" data-field="curriculum-link" href="#"
+                                <a data-course="platform" data-field="curriculum-link" href="{{ course_platform.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
                                 </a>
@@ -64,7 +68,7 @@
                                     <i class="fas fa-calendar text-[0.6rem]"></i>
                                     <span data-course="distributed" data-field="upcoming-batch">—</span>
                                 </span>
-                                <a data-course="distributed" data-field="curriculum-link" href="#"
+                                <a data-course="distributed" data-field="curriculum-link" href="{{ course_distributed.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
                                 </a>
@@ -76,38 +80,38 @@
                     <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                         <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Duration</td>
                         <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700"
-                            data-course="bootcamp" data-field="duration">—</td>
+                            data-course="bootcamp" data-field="duration">{{ course_bootcamp.duration_label }}</td>
                         <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="advanced"
-                            data-field="duration">—</td>
+                            data-field="duration">{{ course_advanced.duration_label }}</td>
                         <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="platform"
-                            data-field="duration">—</td>
+                            data-field="duration">{{ course_platform.duration_label }}</td>
                         <td class="p-4 md:p-6 text-sm text-gray-700" data-course="distributed"
-                            data-field="duration">—</td>
+                            data-field="duration">{{ course_distributed.duration_label }}</td>
                     </tr>
                     <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                         <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Delivery</td>
                         <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm text-gray-700"
-                            data-course="bootcamp" data-field="delivery">—</td>
+                            data-course="bootcamp" data-field="delivery">{{ course_bootcamp.delivery_label }}</td>
                         <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="advanced"
-                            data-field="delivery">—</td>
+                            data-field="delivery">{{ course_advanced.delivery_label }}</td>
                         <td class="p-4 md:p-6 border-r border-gray-200 text-sm text-gray-700" data-course="platform"
-                            data-field="delivery">—</td>
+                            data-field="delivery">{{ course_platform.delivery_label }}</td>
                         <td class="p-4 md:p-6 text-sm text-gray-700" data-course="distributed"
-                            data-field="delivery">—</td>
+                            data-field="delivery">{{ course_distributed.delivery_label }}</td>
                     </tr>
                     <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                         <td class="sticky left-0 z-10 bg-white p-4 md:p-6 font-semibold text-gray-900 border-r border-gray-200 text-sm">Program Fee</td>
                         <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40 text-sm">
-                            <p class="font-semibold text-gray-900" data-course="bootcamp" data-field="price">—</p>
+                            <p class="font-semibold text-gray-900" data-course="bootcamp" data-field="price">{{ course_bootcamp.price_label }}</p>
                         </td>
                         <td class="p-4 md:p-6 border-r border-gray-200 text-sm">
-                            <p class="font-semibold text-gray-900" data-course="advanced" data-field="price">—</p>
+                            <p class="font-semibold text-gray-900" data-course="advanced" data-field="price">{{ course_advanced.price_label }}</p>
                         </td>
                         <td class="p-4 md:p-6 border-r border-gray-200 text-sm">
-                            <p class="font-semibold text-gray-900" data-course="platform" data-field="price">—</p>
+                            <p class="font-semibold text-gray-900" data-course="platform" data-field="price">{{ course_platform.price_label }}</p>
                         </td>
                         <td class="p-4 md:p-6 text-sm">
-                            <p class="font-semibold text-gray-900" data-course="distributed" data-field="price">—</p>
+                            <p class="font-semibold text-gray-900" data-course="distributed" data-field="price">{{ course_distributed.price_label }}</p>
                         </td>
                     </tr>
                     <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">

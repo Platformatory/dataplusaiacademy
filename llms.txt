@@ -1,0 +1,16 @@
+# Data + AI Academy
+
+> Practitioner-led, cohort-based bootcamps in Data Engineering, Platform Engineering, and AI Engineering. In-person in Bengaluru (North and South campuses) and live online. Run by Platformatory Labs.
+
+## Courses
+
+- [Real-Time Data Bootcamp](https://dataplusai.academy/courses/real-time-data-bootcamp/): 3-month hybrid, in-person bootcamp on Kafka, Spark, Flink, and Airflow — for career-transition data engineers.
+- [Data x Agentic AI Immersion](https://dataplusai.academy/courses/lakehouse-x-agenticai/): 3-month weekend program on lakehouse architecture and agentic AI applications.
+- [Platform Engineering Bootcamp](https://dataplusai.academy/courses/platform-engineering-bootcamp/): 3-month hybrid program for DevOps/SRE engineers and infra-curious grads.
+- [Distributed Systems & Database Internals](https://dataplusai.academy/courses/distributed-systems-db-internals/): 6-month part-time program for senior engineers building databases and streaming systems.
+
+## Other pages
+
+- [Corporate Training](https://dataplusai.academy/corporate-training.html): On-site or online team training — Agentic AI, data infrastructure, API gateways, Kubernetes.
+- [Events](https://dataplusai.academy/events.html): Upcoming and past masterclasses and workshops.
+- [Enroll](https://dataplusai.academy/enroll.html): Start the enrollment process.
