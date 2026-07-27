@@ -1,7 +1,7 @@
 ---
 layout: course
 course_id: distributed
-name: "Distributed Systems & Database Internals"
+name: "Distributed x Data. Sys Design & Internals"
 tagline: "For Sr Engineers seeking experience in building databases & streaming systems"
 duration_label: "6 months, Part-time"
 delivery_label: "Live Online on Weekends (3 hours)"
@@ -43,6 +43,11 @@ modules:
       - "Design patterns for high-scale streaming systems"
       - "Practical algorithms & strategies"
       - "Performance tuning & intuition-building"
+  - title: "Systems + Design Practice"
+    topics:
+      - "System design frameworks & trade-off analysis"
+      - "Designing for scale: sharding, caching, load balancing"
+      - "Mock system design interviews & reviews"
   - title: "Capstone: Infrastructure Project"
     topics:
       - "Contribute to a real large-scale infrastructure project"
