@@ -47,6 +47,15 @@
 
     {% include subpage-nav.html %}
 
+    <noscript>
+        <!-- Anchors below only work with JS (js/nav.js rewrites them to home-page URLs).
+             This is the no-JS fallback to the full menu on sub-pages. -->
+        <a href="{{ '/' | relative_url }}"
+            class="fixed bottom-4 left-4 z-50 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/80 text-white text-xs font-semibold hover:bg-green-700 transition-colors">
+            <i class="fas fa-arrow-left text-[0.6rem]"></i> Home
+        </a>
+    </noscript>
+
     <!-- Hero -->
     <header class="relative bg-[#050505] text-white py-16 md:py-24 overflow-hidden">
         <div class="absolute inset-0 bg-[url('/img/grid-pattern.svg')] opacity-10"></div>
@@ -65,10 +74,10 @@
             </div>
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 tracking-tight leading-[1.1]">{{ page.name }}</h1>
             <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">{{ page.tagline }}</p>
-            <a href="{{ '/enroll.html' | relative_url }}"
+            <a data-coordinator-link="course" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                 class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base md:text-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-xl shadow-green-600/30">
                 Talk to a Coordinator
-                <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-arrow-up-right-from-square text-sm"></i>
             </a>
         </div>
     </header>
@@ -220,12 +229,13 @@
                     Ready to get started?
                 </h2>
                 <p class="text-gray-400 max-w-xl mx-auto mb-10 text-base leading-relaxed">
-                    Talk to a coordinator about seats, scholarships, and the next cohort for {{ page.name }}.
+                    Talk to a coordinator about seats and scholarships for {{ page.name }}. Training operations are
+                    run with our coordinator partner, Acyra.
                 </p>
-                <a href="{{ '/enroll.html' | relative_url }}"
+                <a data-coordinator-link="course" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                     class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-green-600 text-white font-bold text-base md:text-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-xl shadow-green-600/30">
                     Talk to a Coordinator
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-up-right-from-square text-sm"></i>
                 </a>
             </div>
         </section>
@@ -234,10 +244,16 @@
 
     {% include footer.html %}
 
+    <script src="{{ '/js/courses.js' | relative_url }}"></script>
+    <script src="{{ '/js/nav.js' | relative_url }}"></script>
     <script>
+        // Course identity for initCoordinatorLinks() in js/courses.js.
+        window.COURSE = { id: {{ page.course_id | jsonify }}, name: {{ page.name | jsonify }} };
         document.addEventListener("DOMContentLoaded", () => {
             const yearSpan = document.getElementById("current-year");
             if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            initCoordinatorLinks();
+            initNav();
         });
     </script>
 

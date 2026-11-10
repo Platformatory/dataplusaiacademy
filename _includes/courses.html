@@ -22,10 +22,6 @@
                             <a href="{{ '/courses/real-time-data-bootcamp/' | relative_url }}" class="mb-2 block hover:underline">Real-Time Data
                                 Bootcamp</a>
                             <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
-                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-green-200">
-                                    <i class="fas fa-calendar text-[0.6rem]"></i>
-                                    <span data-course="bootcamp" data-field="upcoming-batch">—</span>
-                                </span>
                                 <a data-course="bootcamp" data-field="curriculum-link" href="{{ course_bootcamp.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-green-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
@@ -36,10 +32,6 @@
                             <a href="{{ '/courses/lakehouse-x-agenticai/' | relative_url }}" class="mb-2 block hover:underline">Data x Agentic AI
                                 Immersion</a>
                             <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
-                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-gray-400">
-                                    <i class="fas fa-calendar text-[0.6rem]"></i>
-                                    <span data-course="advanced" data-field="upcoming-batch">—</span>
-                                </span>
                                 <a data-course="advanced" data-field="curriculum-link" href="{{ course_advanced.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
@@ -50,10 +42,6 @@
                             <a href="{{ '/courses/platform-engineering-bootcamp/' | relative_url }}" class="mb-2 block hover:underline">Platform Engineering
                                 Bootcamp</a>
                             <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
-                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-gray-400">
-                                    <i class="fas fa-calendar text-[0.6rem]"></i>
-                                    <span data-course="platform" data-field="upcoming-batch">—</span>
-                                </span>
                                 <a data-course="platform" data-field="curriculum-link" href="{{ course_platform.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
@@ -63,10 +51,6 @@
                         <th class="align-top text-left p-4 md:p-6 text-gray-200 font-bold text-sm md:text-base w-1/5">
                             <a href="{{ course_distributed.url | relative_url }}" class="mb-2 block hover:underline">{{ course_distributed.name }}</a>
                             <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-normal">
-                                <span class="inline-flex items-center gap-1 text-[0.7rem] text-gray-400">
-                                    <i class="fas fa-calendar text-[0.6rem]"></i>
-                                    <span data-course="distributed" data-field="upcoming-batch">—</span>
-                                </span>
                                 <a data-course="distributed" data-field="curriculum-link" href="{{ course_distributed.url | relative_url }}"
                                     class="inline-flex items-center gap-1 text-[0.7rem] text-gray-300 hover:text-white hover:underline">
                                     <i class="fas fa-book-open text-[0.6rem]"></i> Curriculum
@@ -308,32 +292,38 @@
                     <tr class="hover:bg-gray-50 transition-colors">
                         <td class="sticky left-0 z-10 bg-white p-4 md:p-6 border-r border-gray-200"></td>
                         <td class="p-4 md:p-6 border-r border-green-100 bg-green-50/40">
-                            <a href="enroll.html"
+                            <a data-coordinator-link="" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                                 class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
-                                Talk to a Coordinator <i class="fas fa-arrow-right text-xs"></i>
+                                <span class="coordinator-label">Talk to a Coordinator</span> <i class="fas fa-arrow-up-right-from-square text-[0.6rem]"></i>
                             </a>
                         </td>
                         <td class="p-4 md:p-6 border-r border-gray-200">
-                            <a href="enroll.html"
+                            <a data-coordinator-link="" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                                 class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
-                                Talk to a Coordinator <i class="fas fa-arrow-right text-xs"></i>
+                                <span class="coordinator-label">Talk to a Coordinator</span> <i class="fas fa-arrow-up-right-from-square text-[0.6rem]"></i>
                             </a>
                         </td>
                         <td class="p-4 md:p-6 border-r border-gray-200">
-                            <a href="enroll.html"
+                            <a data-coordinator-link="" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                                 class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
-                                Talk to a Coordinator <i class="fas fa-arrow-right text-xs"></i>
+                                <span class="coordinator-label">Talk to a Coordinator</span> <i class="fas fa-arrow-up-right-from-square text-[0.6rem]"></i>
                             </a>
                         </td>
                         <td class="p-4 md:p-6">
-                            <a href="enroll.html"
+                            <a data-coordinator-link="" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                                 class="inline-flex items-center gap-2 text-green-700 font-semibold text-sm hover:underline">
-                                Talk to a Coordinator <i class="fas fa-arrow-right text-xs"></i>
+                                <span class="coordinator-label">Talk to a Coordinator</span> <i class="fas fa-arrow-up-right-from-square text-[0.6rem]"></i>
                             </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <p class="text-center text-xs text-gray-500 mt-6 max-w-3xl mx-auto">
+            Programmes are coordinated and delivered in partnership with <a href="https://acyra.in" target="_blank"
+                rel="noopener" class="font-semibold text-gray-700 hover:text-green-700 hover:underline">Acyra</a>, our
+            coordinator &amp; training operations partner. For seats, scholarships and any enrolment questions, talk to
+            an Acyra coordinator.
+        </p>
     </div>
 </section>

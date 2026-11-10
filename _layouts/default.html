@@ -16,6 +16,7 @@
     {% include schema-organization.html %}
     <script src="{{ '/js/events.js' | relative_url }}"></script>
     <script src="{{ '/js/courses.js' | relative_url }}"></script>
+    <script src="{{ '/js/nav.js' | relative_url }}"></script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -40,8 +41,11 @@
             // Announcement Banner: shows the soonest upcoming event from data/events.json
             initAnnouncementBanner();
 
-            // Course facts (duration, delivery, upcoming batch) from data/courses.json
+            // Course facts (duration, delivery, price) from data/courses.json
             initCourses();
+
+            // "Talk to a Coordinator" links -> Acyra with course/source context
+            initCoordinatorLinks();
 
             // Counter Logic
             const counters = document.querySelectorAll(".counter");
@@ -123,7 +127,7 @@
             const articleElement = document.getElementById('typing-article');
             if (!typingElement) return;
 
-            const phrases = ["Platform Engineer.", "Data Engineer.", "AI Engineer."];
+            const phrases = ["Platform Engineer.", "Data Engineer.", "AI Engineer.", "Forward Deployed Engineer."];
             let phraseIndex = 0;
             let charIndex = phrases[0].length; // Start fully typed
             let isDeleting = true; // Start by deleting after a pause

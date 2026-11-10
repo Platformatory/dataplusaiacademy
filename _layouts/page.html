@@ -24,14 +24,27 @@
 
     {% include subpage-nav.html %}
 
+    <noscript>
+        <!-- Anchors below only work with JS (js/nav.js rewrites them to home-page URLs).
+             This is the no-JS fallback to the full menu on sub-pages. -->
+        <a href="{{ '/' | relative_url }}"
+            class="fixed bottom-4 left-4 z-50 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/80 text-white text-xs font-semibold hover:bg-green-700 transition-colors">
+            <i class="fas fa-arrow-left text-[0.6rem]"></i> Home
+        </a>
+    </noscript>
+
     {{ content }}
 
     {% include footer.html %}
 
+    <script src="{{ '/js/courses.js' | relative_url }}"></script>
+    <script src="{{ '/js/nav.js' | relative_url }}"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const yearSpan = document.getElementById("current-year");
             if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            initCoordinatorLinks();
+            initNav();
         });
     </script>
 

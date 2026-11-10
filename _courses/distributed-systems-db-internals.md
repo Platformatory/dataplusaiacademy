@@ -6,7 +6,7 @@ tagline: "For Sr Engineers seeking experience in building databases & streaming 
 duration_label: "6 months, Part-time"
 delivery_label: "Live Online on Weekends (3 hours)"
 format_label: "Hybrid — Weekends"
-price_label: "₹1,20,000 · Limited seats"
+price_label: "₹1,50,000 + 18% GST · Limited seats"
 cohort_size: "Only 6 students"
 scholarship: "Not offered"
 certificate: "No"

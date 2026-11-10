@@ -1,0 +1,12 @@
+---
+layout: null
+---
+{
+  "base": "https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator",
+  "source": {{ site.url | append: "/" | jsonify }},
+  "courses": {
+  {% for course in site.courses %}
+    {{ course.course_id | jsonify }}: {{ course.name | jsonify }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  }
+}

@@ -11,6 +11,7 @@
 
 ## Other pages
 
+- [About](https://dataplusai.academy/about.html): Who we are — a unit of Platformatory Labs, teaching by practitioners, with Acyra as coordinator & training operations partner.
 - [Corporate Training](https://dataplusai.academy/corporate-training.html): On-site or online team training — Agentic AI, data infrastructure, API gateways, Kubernetes.
 - [Events](https://dataplusai.academy/events.html): Upcoming and past masterclasses and workshops.
-- [Enroll](https://dataplusai.academy/enroll.html): Start the enrollment process.
+- [Talk to a Coordinator](https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator): Enrolment runs through Acyra, our coordinator & training operations partner.

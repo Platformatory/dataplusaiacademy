@@ -52,6 +52,10 @@ robots: index, follow
 </section>
 
 <script src="{{ '/js/events.js' | relative_url }}"></script>
+<script src="{{ '/js/nav.js' | relative_url }}"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", initEventsListing);
+    document.addEventListener("DOMContentLoaded", () => {
+        initEventsListing();
+        initNav();
+    });
 </script>

@@ -56,12 +56,13 @@
 <body class="font-['Inter',sans-serif] bg-[#FCFCF9] text-[#1A1A1A] leading-[1.6] antialiased"
     data-event-slug="{{ page.event_slug }}">
 
-    {% include event-nav.html %}
+    {% include nav.html %}
 
     {{ content }}
 
     {% include footer.html %}
 
+    <script src="{{ '/js/nav.js' | relative_url }}"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const yearSpan = document.getElementById("current-year");

@@ -1,3 +1,7 @@
+<!-- The single site-wide nav, used by the home page, sub-pages (via subpage-nav.html)
+     and course pages alike. On non-home pages, js/nav.js rewrites the in-page anchors
+     (#courses, #contact) into "/#courses" links so the menu stays identical everywhere
+     instead of collapsing into a "Back to Home" bar. -->
 <nav class="py-3 sticky top-0 bg-[rgba(252,252,249,0.95)] backdrop-blur-md z-[1000] border-b border-[#E0E0E0]">
     <div class="w-full mx-auto px-3 sm:px-4 md:px-12 flex justify-between items-center gap-2 sm:gap-3">
         <a href="{{ '/' | relative_url }}" class="no-underline tracking-tight flex flex-col leading-none group min-w-0">
@@ -11,18 +15,20 @@
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-8 mx-auto">
-            <a href="#courses"
+            <a href="{{ '/about.html' | relative_url }}"
+                class="text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors">About</a>
+            <a href="#courses" data-home-anchor="#courses"
                 class="text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors">Courses</a>
             <a href="{{ '/events.html' | relative_url }}"
                 class="text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors">Events</a>
             <a href="{{ '/corporate-training.html' | relative_url }}"
                 class="text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors">Corporate</a>
-            <a href="#contact"
+            <a href="#contact" data-home-anchor="#contact"
                 class="text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors">Contact</a>
         </div>
 
         <div class="flex items-center gap-1 sm:gap-2 md:gap-4 shrink-0">
-            <a href="enroll.html"
+            <a data-coordinator-link="general" href="https://acyra.in/contact?utm_source=dataplusai.academy&utm_medium=referral&utm_campaign=coordinator"
                 class="group relative px-2.5 sm:px-4 md:px-8 py-2 md:py-3 rounded-full bg-green-600 text-white font-bold transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-green-600/20 text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap">
                 <span class="flex items-center gap-1 sm:gap-2">
                     <span class="sm:hidden">Talk to Us</span>
@@ -42,13 +48,15 @@
     <!-- Mobile Menu Panel -->
     <div id="nav-menu-panel"
         class="lg:hidden hidden flex-col gap-1 px-4 pb-4 pt-2 border-t border-[#E0E0E0] mt-3 bg-[rgba(252,252,249,0.98)]">
-        <a href="#courses"
+        <a href="{{ '/about.html' | relative_url }}"
+            class="px-2 py-2.5 rounded-lg text-sm font-semibold text-gray-700 hover:text-green-600 hover:bg-gray-50 transition-colors">About</a>
+        <a href="#courses" data-home-anchor="#courses"
             class="px-2 py-2.5 rounded-lg text-sm font-semibold text-gray-700 hover:text-green-600 hover:bg-gray-50 transition-colors">Courses</a>
         <a href="{{ '/events.html' | relative_url }}"
             class="px-2 py-2.5 rounded-lg text-sm font-semibold text-gray-700 hover:text-green-600 hover:bg-gray-50 transition-colors">Events</a>
         <a href="{{ '/corporate-training.html' | relative_url }}"
             class="px-2 py-2.5 rounded-lg text-sm font-semibold text-gray-700 hover:text-green-600 hover:bg-gray-50 transition-colors">Corporate</a>
-        <a href="#contact"
+        <a href="#contact" data-home-anchor="#contact"
             class="px-2 py-2.5 rounded-lg text-sm font-semibold text-gray-700 hover:text-green-600 hover:bg-gray-50 transition-colors">Contact</a>
     </div>
 </nav>

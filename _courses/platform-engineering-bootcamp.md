@@ -6,7 +6,7 @@ tagline: "Deep infrastructure skills for DevOps/SRE engineers and infra-curious 
 duration_label: "3 Months"
 delivery_label: "Cohort-based, hybrid sessions"
 format_label: "Hybrid — Weekdays, In-Person"
-price_label: "₹36,000 · Limited seats"
+price_label: "₹60,000 + 18% GST · Limited seats"
 cohort_size: "12-18 students"
 scholarship: "Yes, contact us"
 certificate: "Yes"
